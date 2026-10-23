@@ -1,0 +1,9 @@
+{
+  "name": "rsa-gulf-server",
+  "version": "1.0.0",
+  "description": "Website + SQLite backend for RSA & Gulf Consultant (no third-party dependencies)",
+  "private": true,
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "backup": "node backup.js", "test": "node test.js" },
+  "engines": { "node": ">=22.13" }
+}

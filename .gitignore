@@ -1,0 +1,10 @@
+# NEVER commit client data: passports, CNICs, the database, passwords
+data/
+backups/
+uploads/
+*.db
+*.db-wal
+*.db-shm
+.secret
+.env
+node_modules/

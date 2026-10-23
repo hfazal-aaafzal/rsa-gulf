@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Office admin</title>
+<style>
+:root { --bg:#FFF8EC; --surface:#fff; --ink:#0B2A4A; --muted:#5B6B80; --line:#E3D6BC; --sun:#F59E0B; --green:#12924B; --red:#C62828; --blue:#1F6FEB; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0B1626; --surface:#122238; --ink:#EAF1FB; --muted:#9FB0C6; --line:#25384F; } }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); }
+button, input, select, textarea { font: inherit; color: inherit; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.4rem; margin: 0; }
+.top { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { border: 2px solid var(--ink); background: var(--surface); border-radius: 12px; padding: 8px 14px; min-height: 44px; font-weight: 700; cursor: pointer; }
+.btn.pri { background: var(--sun); border-color: var(--sun); color: #1B1204; }
+.btn.go { background: var(--green); border-color: var(--green); color: #fff; }
+.btn.bad { border-color: var(--red); color: var(--red); }
+.btn.arm { background: var(--red); color: #fff; }
+.login[hidden], #main[hidden] { display: none; }
+.login { max-width: 360px; margin: 12vh auto 0; background: var(--surface); border: 2px solid var(--sun); border-radius: 20px; padding: 22px; display: grid; gap: 12px; }
+a.btn { color: var(--ink); }
+a.btn.go { color: #fff; }
+input[type=text], input[type=password], input[type=search], input[type=date], input[type=tel], select, textarea { width: 100%; background: var(--bg); border: 2px solid var(--line); border-radius: 10px; padding: 8px 10px; min-height: 44px; }
+label { display: grid; gap: 4px; font-weight: 700; font-size: .9rem; }
+.msg { min-height: 1.4em; font-weight: 700; color: var(--green); }
+.msg.err { color: var(--red); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.chip { border: 2px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; min-height: 40px; font-weight: 700; cursor: pointer; }
+.chip b { font-family: ui-monospace, monospace; margin-left: 6px; font-weight: 500; }
+.chip[aria-pressed=true] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.list { display: grid; gap: 12px; margin-top: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.sum { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; justify-content: space-between; padding: 12px 14px; cursor: pointer; width: 100%; text-align: left; background: none; border: 0; }
+.sum strong { font-size: 1.1rem; }
+.meta { color: var(--muted); font-size: .88rem; }
+.badge { border-radius: 999px; padding: 2px 10px; font-size: .8rem; font-weight: 800; border: 2px solid var(--line); }
+.badge.due { border-color: var(--red); color: var(--red); }
+.det { padding: 4px 14px 14px; display: grid; gap: 12px; border-top: 1px solid var(--line); }
+.det[hidden] { display: none; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+.files { display: flex; flex-wrap: wrap; gap: 10px; }
+.file { display: grid; gap: 4px; width: 120px; text-align: center; font-size: .78rem; }
+.file a { display: grid; place-items: center; width: 120px; height: 90px; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; font-weight: 800; color: var(--ink); }
+.file img { width: 100%; height: 100%; object-fit: cover; }
+.file button { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; min-height: 30px; cursor: pointer; }
+.hist { margin: 0; padding-left: 18px; color: var(--muted); font-size: .85rem; }
+.add { background: var(--surface); border: 2px solid var(--sun); border-radius: 16px; padding: 14px; display: grid; gap: 10px; margin-top: 12px; }
+.add[hidden] { display: none; }
+.warn { background: color-mix(in srgb, var(--sun) 18%, var(--surface)); border: 1px solid var(--sun); border-radius: 12px; padding: 8px 12px; font-size: .9rem; font-weight: 600; }
+.empty { text-align: center; color: var(--muted); padding: 30px 10px; border: 2px dashed var(--line); border-radius: 16px; }
+</style></head>
+<body>
+<div class="wrap" id="app">
+  <form class="login" id="login" hidden>
+    <h1>Office admin</h1>
+    <label>Password<input type="password" id="pw" autocomplete="current-password" required></label>
+    <button class="btn pri" type="submit">Sign in</button>
+    <p class="msg err" id="loginMsg" role="alert"></p>
+  </form>
+
+  <div id="main" hidden>
+    <div class="top">
+      <h1>Office admin</h1>
+      <div class="btns">
+        <button class="btn pri" id="addBtn" type="button">Add applicant</button>
+        <a class="btn" id="csvBtn" href="/api/admin/export.csv" style="text-decoration:none;display:inline-flex;align-items:center">Export CSV</a>
+        <a class="btn" id="dbBtn" href="/api/admin/backup" style="text-decoration:none;display:inline-flex;align-items:center">Backup database</a>
+        <button class="btn" id="outBtn" type="button">Sign out</button>
+      </div>
+    </div>
+    <p class="warn">This page shows passports, CNICs and addresses. Do not share the password. Sign out on shared computers.</p>
+    <form class="add" id="addForm" hidden>
+      <div class="grid">
+        <label>Name<input type="text" id="aName" maxlength="60"></label>
+        <label>City<input type="text" id="aCity" maxlength="40"></label>
+        <label>WhatsApp<input type="tel" id="aPhone" maxlength="16"></label>
+        <label>Passport no.<input type="text" id="aPass" maxlength="12"></label>
+        <label>Country<input type="text" id="aCountry" maxlength="30"></label>
+        <label>Follow-up date<input type="date" id="aFollow"></label>
+      </div>
+      <label>Address<input type="text" id="aAddr" maxlength="120"></label>
+      <label>Note<textarea id="aNote" rows="2" maxlength="1000"></textarea></label>
+      <div class="btns"><button class="btn go" type="submit">Save</button><button class="btn" type="button" id="addCancel">Cancel</button></div>
+    </form>
+    <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    <input type="search" id="search" placeholder="Search name, phone, city, passport, reference" aria-label="Search">
+    <div class="chips" id="chips"></div>
+    <div class="list" id="list"></div>
+  </div>
+</div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var STATUS = [['new', 'New'], ['contacted', 'Contacted'], ['documents', 'Documents received'], ['medical', 'Medical'], ['visa', 'Visa processing'], ['departed', 'Departed'], ['closed', 'Not proceeding']];
+  var KINDS = [['passport', 'Passport'], ['cnic', 'CNIC'], ['photos', 'Photos'], ['cv', 'CV'], ['certificate', 'Certificate'], ['experience', 'Experience letter'], ['other', 'Other']];
+  var flt = 'all', text = '', open = {}, msgT = null, searchT = null;
+  function h(tag, props, kids) {
+    var e = document.createElement(tag);
+    Object.keys(props || {}).forEach(function (k) {
+      var v = props[k];
+      if (k === 'class') { e.className = v; } else if (k === 'text') { e.textContent = v; } else if (k.slice(0, 2) === 'on') { e.addEventListener(k.slice(2), v); } else { e.setAttribute(k, v); }
+    });
+    (kids || []).forEach(function (c) { if (c != null && c !== false) { e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); } });
+    return e;
+  }
+  function msg(t, bad) { var m = $('msg'); m.textContent = t || ''; m.className = 'msg' + (bad ? ' err' : ''); clearTimeout(msgT); if (t) { msgT = setTimeout(function () { m.textContent = ''; }, 6000); } }
+  function label(list, k) { for (var i = 0; i < list.length; i++) { if (list[i][0] === k) { return list[i][1]; } } return k; }
+  function ymd() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function fmt(ms) { try { return new Date(ms).toLocaleString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; } }
+  function waNum(p) { var d = String(p || '').replace(/\D/g, ''); if (d.indexOf('00') === 0) { d = d.slice(2); } if (d.charAt(0) === '0') { d = '92' + d.slice(1); } return d; }
+
+  async function call(method, url, body) {
+    var opt = { method: method, headers: { 'X-Requested-With': 'rsa' }, credentials: 'same-origin' };
+    if (body !== undefined) { opt.headers['Content-Type'] = 'application/json'; opt.body = JSON.stringify(body); }
+    var r = await fetch(url, opt), j = null;
+    try { j = await r.json(); } catch (e) {}
+    if (r.status === 401 && url !== '/api/login') { showLogin(); throw new Error('Please sign in.'); }
+    if (!r.ok) { throw new Error((j && j.error) || 'Something went wrong.'); }
+    return j;
+  }
+  function showLogin() { $('main').hidden = true; $('login').hidden = false; $('pw').focus(); }
+  function showMain() { $('login').hidden = true; $('main').hidden = false; load(); }
+
+  $('login').addEventListener('submit', async function (e) {
+    e.preventDefault(); $('loginMsg').textContent = '';
+    try { await call('POST', '/api/login', { password: $('pw').value }); $('pw').value = ''; showMain(); }
+    catch (err) { $('loginMsg').textContent = err.message; }
+  });
+  $('outBtn').addEventListener('click', async function () { try { await call('POST', '/api/logout', {}); } catch (e) {} showLogin(); });
+  $('addBtn').addEventListener('click', function () { var f = $('addForm'); f.hidden = !f.hidden; if (!f.hidden) { $('aName').focus(); } });
+  $('addCancel').addEventListener('click', function () { $('addForm').hidden = true; });
+  $('addForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    try {
+      await call('POST', '/api/admin/applications', { name: $('aName').value, city: $('aCity').value, whatsapp: $('aPhone').value, passport: $('aPass').value, country: $('aCountry').value, address: $('aAddr').value, note: $('aNote').value, follow_up: $('aFollow').value });
+      $('addForm').reset(); $('addForm').hidden = true; msg('Saved.'); load();
+    } catch (err) { msg(err.message, true); }
+  });
+  $('search').addEventListener('input', function () { clearTimeout(searchT); var v = this.value; searchT = setTimeout(function () { text = v; load(); }, 250); });
+
+  var last = { rows: [], counts: {}, due: 0 };
+  async function load() {
+    try {
+      var url = '/api/admin/applications?q=' + encodeURIComponent(text) + (flt !== 'all' && flt !== 'due' ? '&status=' + flt : '');
+      last = await call('GET', url);
+      render();
+    } catch (err) { if (!$('main').hidden) { msg(err.message, true); } }
+  }
+  function render() {
+    var total = 0; Object.keys(last.counts).forEach(function (k) { total += last.counts[k]; });
+    var chips = $('chips'); chips.textContent = '';
+    function chip(key, name, n) { chips.appendChild(h('button', { type: 'button', class: 'chip', 'aria-pressed': flt === key ? 'true' : 'false', onclick: function () { flt = key; load(); } }, [name, h('b', { text: String(n) })])); }
+    chip('all', 'All', total); chip('due', 'Follow-up due', last.due);
+    STATUS.forEach(function (s) { chip(s[0], s[1], last.counts[s[0]] || 0); });
+    var list = $('list'); list.textContent = '';
+    var rows = last.rows.filter(function (r) { return flt !== 'due' || (r.follow_up && r.follow_up <= ymd() && r.status !== 'departed' && r.status !== 'closed'); });
+    if (!rows.length) { list.appendChild(h('div', { class: 'empty', text: total ? 'No applicants match.' : 'No applications yet. They appear here when a client sends the website form.' })); return; }
+    rows.forEach(function (r) { list.appendChild(card(r)); });
+  }
+  function card(r) {
+    var due = r.follow_up && r.follow_up <= ymd() && r.status !== 'departed' && r.status !== 'closed';
+    var det = h('div', { class: 'det', hidden: '' });
+    var box = h('div', { class: 'card' });
+    var sum = h('button', { type: 'button', class: 'sum', 'aria-expanded': 'false' }, [
+      h('span', {}, [h('strong', { text: r.name || '(no name)' }), h('div', { class: 'meta', text: [r.ref, r.city, r.whatsapp, 'Received ' + fmt(r.created_at)].filter(Boolean).join(' · ') })]),
+      h('span', { class: 'meta' }, [h('span', { class: 'badge', text: label(STATUS, r.status) }), ' ', r.file_count ? h('span', { class: 'badge', text: r.file_count + ' file' + (r.file_count > 1 ? 's' : '') }) : null, ' ', due ? h('span', { class: 'badge due', text: 'Follow-up due' }) : null])
+    ]);
+    sum.addEventListener('click', async function () {
+      var on = det.hidden; det.hidden = !on; sum.setAttribute('aria-expanded', on ? 'true' : 'false'); open[r.id] = on;
+      if (on) { await fill(det, r.id); }
+    });
+    box.appendChild(sum); box.appendChild(det);
+    if (open[r.id]) { det.hidden = false; sum.setAttribute('aria-expanded', 'true'); fill(det, r.id); }
+    return box;
+  }
+  async function fill(det, id) {
+    var d;
+    try { d = await call('GET', '/api/admin/applications/' + id); } catch (err) { det.textContent = err.message; return; }
+    det.textContent = '';
+    function inp(name, key, type, max) { var i = h('input', { type: type || 'text', maxlength: String(max || 120) }); i.value = d[key] || ''; i.addEventListener('change', async function () { var o = {}; o[key] = i.value; try { await call('PATCH', '/api/admin/applications/' + id, o); msg('Saved.'); load(); } catch (err) { msg(err.message, true); } }); return h('label', {}, [name, i]); }
+    var st = h('select', {}, STATUS.map(function (s) { return h('option', { value: s[0], text: s[1] }); })); st.value = d.status;
+    st.addEventListener('change', async function () { try { await call('PATCH', '/api/admin/applications/' + id, { status: st.value }); msg('Status saved.'); load(); } catch (err) { msg(err.message, true); } });
+    var wa = waNum(d.whatsapp);
+    det.appendChild(h('div', { class: 'btns' }, [
+      wa ? h('a', { class: 'btn go', href: 'https://wa.me/' + wa, target: '_blank', rel: 'noopener', text: 'Open WhatsApp', style: 'text-decoration:none;display:inline-flex;align-items:center' }) : null,
+      d.whatsapp ? h('a', { class: 'btn', href: 'tel:' + d.whatsapp, text: 'Call', style: 'text-decoration:none;display:inline-flex;align-items:center' }) : null
+    ]));
+    det.appendChild(h('div', { class: 'grid' }, [h('label', {}, ['Status', st]), inp('Follow-up date', 'follow_up', 'date', 10), inp('Name', 'name', 'text', 60), inp('City', 'city', 'text', 40), inp('WhatsApp', 'whatsapp', 'tel', 16), inp('Passport no.', 'passport', 'text', 12), inp('Country', 'country', 'text', 30)]));
+    det.appendChild(inp('Address', 'address', 'text', 120));
+    if (d.docs_declared) { det.appendChild(h('p', { class: 'meta', text: 'Client says they have: ' + d.docs_declared })); }
+    var note = h('textarea', { rows: '2', maxlength: '1000' }); note.value = d.note || '';
+    note.addEventListener('change', async function () { try { await call('PATCH', '/api/admin/applications/' + id, { note: note.value }); msg('Note saved.'); } catch (err) { msg(err.message, true); } });
+    det.appendChild(h('label', {}, ['Note', note]));
+    var files = h('div', { class: 'files' });
+    d.files.forEach(function (f) {
+      var isImg = /^image\//.test(f.mime);
+      var a = h('a', { href: '/api/admin/files/' + f.id, target: '_blank', rel: 'noopener' }, [isImg ? h('img', { src: '/api/admin/files/' + f.id, alt: '', loading: 'lazy' }) : 'PDF']);
+      var del = h('button', { type: 'button', text: 'Remove' }), armed = false;
+      del.addEventListener('click', async function () {
+        if (!armed) { armed = true; del.textContent = 'Tap again'; del.className = 'arm'; setTimeout(function () { armed = false; del.textContent = 'Remove'; del.className = ''; }, 4000); return; }
+        try { await call('DELETE', '/api/admin/files/' + f.id); msg('File removed.'); load(); } catch (err) { msg(err.message, true); }
+      });
+      files.appendChild(h('div', { class: 'file' }, [a, h('span', { text: label(KINDS, f.kind) }), del]));
+    });
+    det.appendChild(files);
+    var ksel = h('select', {}, KINDS.map(function (k) { return h('option', { value: k[0], text: k[1] }); }));
+    var fi = h('input', { type: 'file', accept: 'image/*,.pdf,application/pdf', hidden: '' });
+    fi.addEventListener('change', async function () {
+      var f = fi.files && fi.files[0]; fi.value = ''; if (!f) { return; }
+      if (f.size > 6 * 1024 * 1024) { msg('The file is over 6 MB.', true); return; }
+      try { var data = await b64(f); await call('POST', '/api/admin/applications/' + id + '/files', { files: [{ kind: ksel.value, name: f.name, data: data }] }); msg('File added.'); load(); } catch (err) { msg(err.message, true); }
+    });
+    det.appendChild(h('div', { class: 'btns' }, [ksel, h('button', { type: 'button', class: 'btn', text: 'Attach file', onclick: function () { fi.click(); } }), fi]));
+    if (d.history.length) { det.appendChild(h('ul', { class: 'hist' }, d.history.map(function (x) { return h('li', { text: fmt(x.at) + ' · ' + x.text }); }))); }
+    var odel = h('button', { type: 'button', class: 'btn bad', text: 'Delete applicant and files' }), oarm = false;
+    odel.addEventListener('click', async function () {
+      if (!oarm) { oarm = true; odel.textContent = 'Tap again to delete for good'; odel.classList.add('arm'); setTimeout(function () { oarm = false; odel.textContent = 'Delete applicant and files'; odel.classList.remove('arm'); }, 4000); return; }
+      try { await call('DELETE', '/api/admin/applications/' + id); delete open[id]; msg('Deleted.'); load(); } catch (err) { msg(err.message, true); }
+    });
+    det.appendChild(odel);
+  }
+  function b64(file) { return new Promise(function (res, rej) { var r = new FileReader(); r.onload = function () { res(String(r.result).split(',')[1] || ''); }; r.onerror = function () { rej(new Error('Could not read the file.')); }; r.readAsDataURL(file); }); }
+
+  fetch('/api/session', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (j) { if (j && j.staff) { showMain(); } else { showLogin(); } }).catch(function () { showLogin(); });
+})();
+</script>
+</body></html>

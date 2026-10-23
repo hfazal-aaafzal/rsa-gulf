@@ -1,0 +1,24 @@
+# Full system (website + database + admin) on Render. Needs a PAID web service, because
+# only paid services can have a persistent disk. Free services lose all data on restart.
+services:
+  - type: web
+    name: rsa-gulf
+    runtime: node
+    plan: starter
+    buildCommand: echo "nothing to build"
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: rsa-data
+      mountPath: /var/data
+      sizeGB: 1

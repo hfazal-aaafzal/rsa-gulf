@@ -1,0 +1,2364 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>RSA &amp; Gulf Consultant</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="RSA &amp; Gulf Consultant: government licensed overseas employment promoter for Saudi Arabia, UAE, Qatar and Oman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root { --logo: url("logo.jpg"); }
+/* Layout concept: Urdu-first and picture-led for readers with low literacy. A sunset hero scene, big tap targets, a 3-tap apply wizard, and a sticky Call / WhatsApp bar on phones. */
+:root {
+  --bg: #FFF8EE;
+  --surface: #FFFFFF;
+  --surface-2: #FDEBD0;
+  --ink: #0B2240;
+  --muted: #4F5F73;
+  --line: #EBD9BC;
+  --sun: #F5A31A;
+  --sun-deep: #E4631A;
+  --sun-text: #B04A07;
+  --ocean: #1565C0;
+  --green: #12924B;
+  --green-deep: #0C7539;
+  --band: #0B2A4A;
+  --on-band: #F3F7FB;
+  --band-muted: #B7C8DA;
+  --c-orange: #F2780C; --c-blue: #1C6FD1; --c-green: #1F9D55; --c-purple: #7A4CC2; --c-red: #D8363A; --c-teal: #0E9AA7;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-ur: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Noto Naskh Arabic", "Segoe UI", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #08172A; --surface: #0F2540; --surface-2: #17375C; --ink: #EEF3F8; --muted: #A9BBCD; --line: #26446A;
+    --sun-text: #F8BB55; --ocean: #6AAEF0; --band: #0D2B4B; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #08172A; --surface: #0F2540; --surface-2: #17375C; --ink: #EEF3F8; --muted: #A9BBCD; --line: #26446A;
+  --sun-text: #F8BB55; --ocean: #6AAEF0; --band: #0D2B4B; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 60; }
+a { color: inherit; }
+button { font-family: inherit; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 6px; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+.wrap { max-width: 1100px; margin: 0 auto; }
+.bleed { margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
+
+/* bilingual text: Urdu first and large, English small underneath */
+.ur { display: block; font-family: var(--font-ur); line-height: 2.05; font-weight: 500; }
+.en { display: block; font-family: var(--font-body); font-size: 0.82em; line-height: 1.3; opacity: 0.82; }
+h2 .ur { font-size: clamp(1.7rem, 4.6vw, 2.5rem); font-weight: 700; line-height: 1.9; }
+h2 .en { font-family: var(--font-display); font-weight: 800; font-size: clamp(1rem, 2.4vw, 1.25rem); opacity: 0.75; letter-spacing: -0.005em; }
+h3 .ur { font-size: 1.2rem; font-weight: 700; line-height: 1.85; }
+h3 .en { font-weight: 600; font-size: 0.86rem; }
+.section-head { text-align: center; display: grid; gap: 6px; justify-items: center; margin-bottom: 38px; }
+.section-head .sub { color: var(--muted); max-width: 52ch; }
+.section-head .sub .ur { font-size: 1.08rem; }
+section { padding-block: 72px; }
+@media (max-width: 640px) { section { padding-block: 52px; } }
+
+.i { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 58px; padding: 8px 24px; border-radius: 16px; font-weight: 700; font-size: 1rem; text-decoration: none; border: 0; cursor: pointer; text-align: center; line-height: 1.1; }
+.btn .i { font-size: 1.7rem; }
+.btn .txt { display: grid; gap: 0; justify-items: center; }
+.btn .txt .ur { line-height: 1.7; font-size: 1.15rem; font-weight: 700; }
+.btn .txt .en { font-size: 0.74rem; opacity: 0.9; font-weight: 600; }
+.btn-green { background: var(--green); color: #fff; box-shadow: 0 6px 0 var(--green-deep); }
+.btn-green:hover { background: #0F8442; }
+.btn-sun { background: var(--sun); color: #1B1204; box-shadow: 0 6px 0 #C07A06; }
+.btn-sun:hover { background: #FFB63A; }
+.btn-glass { background: rgba(255, 255, 255, 0.16); color: #fff; border: 2px solid rgba(255, 255, 255, 0.7); }
+.btn-glass:hover { background: rgba(255, 255, 255, 0.28); }
+.btn:active { transform: translateY(3px); box-shadow: none; }
+
+/* header */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 66px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+.badge { flex: none; border-radius: 50%; background: #F7F7F7 var(--logo) center / cover no-repeat; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+.brand .badge { width: 46px; height: 46px; }
+.brand-name { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; line-height: 1.1; }
+.brand-name small { display: block; font-family: var(--font-body); font-weight: 600; font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+.header-call { min-height: 46px; padding: 4px 16px; border-radius: 12px; box-shadow: 0 4px 0 var(--green-deep); gap: 8px; }
+.header-call .i { font-size: 1.3rem; }
+.header-call .num { font-family: var(--font-mono); font-size: 0.92rem; font-weight: 500; }
+@media (max-width: 560px) { .header-call .num { display: none; } .brand-name small { display: none; } }
+
+/* hero scene */
+.hero { background: linear-gradient(180deg, #0A2342 0%, #14508F 36%, #E2702B 74%, #F9B93A 100%); color: #fff; position: relative; overflow: hidden; text-align: center; }
+.hero-inner { padding-block: 40px 280px; display: grid; gap: 16px; justify-items: center; position: relative; z-index: 2; }
+.hero .badge { width: 96px; height: 96px; border-width: 4px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }
+.chip { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 999px; padding: 2px 16px; font-weight: 600; font-size: 0.92rem; }
+.chip .ur { line-height: 1.9; font-size: 1rem; }
+.chip .i { font-size: 1.2rem; color: #FFD27A; }
+.hero h1 .ur { font-size: clamp(2.1rem, 6.6vw, 3.9rem); font-weight: 700; line-height: 1.75; }
+.hero h1 .en { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.05rem, 2.8vw, 1.5rem); opacity: 0.92; margin-top: 4px; }
+.hero .lead { max-width: 640px; }
+.hero .lead .ur { font-size: 1.2rem; }
+.hero .lead .en { opacity: 0.88; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 8px; }
+.listen { display: inline-flex; align-items: center; gap: 8px; border: 2px solid currentColor; background: transparent; color: inherit; border-radius: 999px; padding: 4px 16px; min-height: 42px; font-weight: 600; cursor: pointer; }
+.listen .i { font-size: 1.25rem; }
+.listen .ur { line-height: 1.7; font-size: 1rem; }
+.listen[hidden] { display: none; }
+.scene { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 260px; z-index: 1; display: block; }
+.plane { position: absolute; top: 120px; left: 0; width: 64px; height: 64px; z-index: 1; color: #fff; transform: translateX(62vw); opacity: 0.95; }
+.plane svg { width: 100%; height: 100%; fill: currentColor; transform: rotate(90deg); filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)); }
+.trail { position: absolute; top: 151px; left: 0; width: 62vw; border-top: 3px dotted rgba(255, 255, 255, 0.7); z-index: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .plane { animation: fly 20s linear infinite; }
+  .trail { animation: trail 20s linear infinite; }
+  @keyframes fly { from { transform: translateX(-90px); } to { transform: translateX(calc(100vw + 40px)); } }
+  @keyframes trail { from { width: 0; } to { width: calc(100vw + 40px); } }
+  .btn, .tile { transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease; }
+}
+
+/* licence plate overlapping the hero */
+.licence-wrap { margin-top: -74px; position: relative; z-index: 5; }
+.licence { max-width: 640px; margin: 0 auto; background: var(--surface); border: 2px solid var(--sun); border-radius: 22px; padding: 18px 22px; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; box-shadow: 0 22px 44px -22px rgba(11, 34, 64, 0.55); }
+.licence .badge { width: 74px; height: 74px; }
+.licence .ur { font-size: 1rem; line-height: 1.8; }
+.licence .name { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; line-height: 1.15; }
+.licence .no { display: block; font-family: var(--font-mono); font-weight: 500; font-size: clamp(0.78rem, 2.6vw, 0.95rem); background: var(--surface-2); border-radius: 8px; padding: 8px 10px; margin-top: 8px; overflow-wrap: anywhere; }
+@media (max-width: 420px) { .licence { grid-template-columns: minmax(0, 1fr); text-align: center; justify-items: center; } }
+
+/* trust strip */
+.trust { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; padding-block: 40px 0; }
+.trust div { text-align: center; display: grid; justify-items: center; gap: 2px; padding: 8px; }
+.trust .i { font-size: 2.2rem; color: var(--sun-deep); }
+.trust .ur { font-size: 1rem; font-weight: 700; line-height: 1.8; }
+@media (max-width: 760px) { .trust { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* services */
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.service { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 26px 20px 24px; text-align: center; display: grid; gap: 8px; justify-items: center; align-content: start; }
+.ico { width: 72px; height: 72px; border-radius: 22px; display: grid; place-items: center; color: #fff; font-size: 2.1rem; background: var(--c, var(--c-orange)); box-shadow: 0 8px 18px -8px var(--c, var(--c-orange)); }
+.service p .ur { font-size: 0.98rem; color: var(--muted); line-height: 1.9; }
+.service p .en { font-size: 0.82rem; color: var(--muted); }
+@media (max-width: 900px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .services { gap: 12px; } .service { padding: 20px 12px; } .ico { width: 62px; height: 62px; font-size: 1.8rem; } h3 .ur { font-size: 1.05rem; } }
+
+/* destinations */
+.dest-band { background: var(--surface-2); }
+.dests { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.dest { border-radius: 22px; padding: 24px 12px; text-align: center; color: #fff; background: var(--c); display: grid; gap: 2px; justify-items: center; }
+.dest .code { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.16em; opacity: 0.9; }
+.dest .ar { font-family: var(--font-ur); font-size: 1.7rem; font-weight: 700; line-height: 2; }
+.dest .en { font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; opacity: 1; }
+@media (max-width: 760px) { .dests { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* process */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; counter-reset: s; }
+.steps li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 30px 14px 22px; text-align: center; position: relative; display: grid; gap: 6px; justify-items: center; align-content: start; }
+.steps li::before { content: counter(s); position: absolute; top: -18px; left: 50%; transform: translateX(-50%); width: 38px; height: 38px; border-radius: 50%; background: var(--sun); color: #1B1204; font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; display: grid; place-items: center; box-shadow: 0 0 0 5px var(--bg); }
+.steps .i { font-size: 2.6rem; color: var(--ocean); }
+@media (max-width: 760px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 14px; } }
+.fine { margin-top: 28px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+.fine .ur { line-height: 1.9; font-size: 0.98rem; }
+
+/* apply wizard */
+.apply-band { background: linear-gradient(180deg, var(--surface-2), var(--bg)); }
+.wizard { max-width: 760px; margin: 0 auto; background: var(--surface); border: 2px solid var(--sun); border-radius: 26px; padding: 26px; box-shadow: 0 26px 50px -30px rgba(11, 34, 64, 0.5); }
+.dots { display: flex; justify-content: center; gap: 10px; margin-bottom: 14px; }
+.dots span { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; background: var(--surface-2); color: var(--muted); border: 2px solid var(--line); }
+.dots span.on { background: var(--sun); color: #1B1204; border-color: var(--sun); }
+.dots span.done { background: var(--green); color: #fff; border-color: var(--green); }
+.q { text-align: center; margin-bottom: 18px; }
+.q .ur { font-size: 1.45rem; font-weight: 700; line-height: 1.9; }
+.q .en { font-family: var(--font-display); font-weight: 800; font-size: 1rem; opacity: 0.7; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.tiles.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tile { background: var(--bg); border: 2px solid var(--line); border-radius: 18px; min-height: 112px; padding: 12px 6px; cursor: pointer; display: grid; gap: 0; justify-items: center; align-content: center; color: var(--ink); text-align: center; }
+.tile .i { font-size: 2.2rem; color: var(--ocean); }
+.tile .ur { font-size: 1.05rem; font-weight: 700; line-height: 1.8; }
+.tile .en { font-size: 0.74rem; font-weight: 600; }
+.tile:hover { border-color: var(--sun); }
+.tile[aria-pressed="true"] { border-color: var(--green); background: color-mix(in srgb, var(--green) 14%, var(--surface)); }
+.tiles.two .tile { min-height: 96px; }
+.tiles.two .tile .ur { font-size: 1.3rem; }
+.panel[hidden] { display: none; }
+.phone-field { display: grid; gap: 10px; max-width: 420px; margin: 0 auto; }
+.phone-field input { font: inherit; font-family: var(--font-mono); font-size: 1.6rem; letter-spacing: 0.04em; text-align: center; direction: ltr; color: var(--ink); background: var(--bg); border: 3px solid var(--line); border-radius: 16px; padding: 14px; min-height: 66px; width: 100%; min-width: 0; }
+.phone-field input:focus { outline: none; border-color: var(--sun); box-shadow: 0 0 0 4px color-mix(in srgb, var(--sun) 35%, transparent); }
+.phone-hint { text-align: center; color: var(--muted); font-size: 0.9rem; min-height: 1.4em; }
+.phone-hint.bad { color: #C62828; font-weight: 600; }
+.wiz-nav { display: flex; justify-content: center; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+.btn-back { background: var(--surface-2); color: var(--ink); box-shadow: none; min-height: 50px; }
+.msg-box { background: var(--bg); border: 2px dashed var(--line); border-radius: 16px; padding: 14px 16px; text-align: center; margin-bottom: 18px; }
+.msg-box .ur { font-size: 1.2rem; line-height: 2; font-weight: 500; }
+.msg-box .meta { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 8px; }
+.msg-box .meta span { background: var(--surface-2); border-radius: 999px; padding: 3px 12px; font-weight: 600; font-size: 0.85rem; }
+.result-actions { display: grid; gap: 14px; justify-items: center; }
+.result-actions .row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.status { text-align: center; font-weight: 600; color: var(--green-deep); min-height: 1.5em; margin-top: 8px; }
+.wizard .small { text-align: center; color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+@media (max-width: 560px) { .wizard { padding: 18px 12px; border-radius: 22px; } .tiles { gap: 8px; } .tile { min-height: 104px; } .tile .i { font-size: 2rem; } .tile .ur { font-size: 0.98rem; } }
+
+/* employers */
+.band { background: var(--band); color: var(--on-band); }
+.band .grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 40px; align-items: center; }
+.band h2 .ur { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+.band .lead .ur { font-size: 1.1rem; color: var(--band-muted); }
+.band .lead .en { color: var(--band-muted); }
+.band .btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
+.band ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.band li { display: flex; gap: 14px; align-items: center; padding: 14px 16px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; background: rgba(255, 255, 255, 0.05); }
+.band li .i { font-size: 2rem; color: var(--sun); }
+.band li .ur { font-size: 1.05rem; line-height: 1.8; font-weight: 700; }
+@media (max-width: 860px) { .band .grid { grid-template-columns: minmax(0, 1fr); text-align: center; } .band .btn-row { justify-content: center; } }
+
+/* safety */
+.tips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.tip { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px 18px; text-align: center; display: grid; gap: 6px; justify-items: center; align-content: start; }
+.tip .i { font-size: 2.4rem; color: var(--green); }
+.tip p { color: var(--muted); }
+.tip p .ur { font-size: 1rem; line-height: 1.95; }
+.tip a { color: var(--ocean); font-weight: 700; }
+@media (max-width: 800px) { .tips { grid-template-columns: minmax(0, 1fr); } }
+
+/* contact */
+.contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 820px; margin: 0 auto; }
+.big-num { grid-column: 1 / -1; text-align: center; background: var(--surface); border: 2px solid var(--green); border-radius: 22px; padding: 20px 14px; display: grid; gap: 4px; justify-items: center; }
+.big-num .num { font-family: var(--font-mono); font-weight: 500; font-size: clamp(1.7rem, 7vw, 2.8rem); letter-spacing: 0.02em; user-select: all; }
+.big-num .btn { margin-top: 10px; }
+.chan { display: flex; align-items: center; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px; text-decoration: none; min-width: 0; min-height: 76px; }
+.chan:hover { border-color: var(--sun); }
+.chan .ci { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; color: #fff; font-size: 1.7rem; background: var(--c); flex: none; }
+.chan .t { min-width: 0; display: grid; }
+.chan .t .ur { font-size: 1.05rem; font-weight: 700; line-height: 1.8; }
+.chan .t .en { font-size: 0.82rem; overflow-wrap: anywhere; }
+.chan.wide { grid-column: 1 / -1; }
+.copy-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 4px; }
+.mini { font-weight: 600; font-size: 0.9rem; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 6px 14px; cursor: pointer; min-height: 38px; }
+@media (max-width: 600px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
+
+footer { background: var(--band); color: var(--on-band); padding-block: 40px calc(36px + env(safe-area-inset-bottom, 0px)); }
+.foot { display: grid; gap: 22px; justify-items: center; text-align: center; }
+.foot .badge { width: 68px; height: 68px; }
+.foot b { font-family: var(--font-display); font-size: 1.2rem; display: block; }
+.foot .sm { font-size: 0.88rem; color: var(--band-muted); }
+.foot .lic { font-family: var(--font-mono); font-size: 0.84rem; color: var(--band-muted); overflow-wrap: anywhere; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; list-style: none; margin: 0; padding: 0; }
+.foot-links a { color: var(--on-band); text-decoration: none; font-weight: 600; }
+.foot-links a:hover { text-decoration: underline; }
+
+/* sticky call bar (phones) */
+.dock { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: calc(86px + env(safe-area-inset-bottom, 0px)); }
+  .dock { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; background: var(--bg); border-top: 1px solid var(--line); padding: 10px max(12px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); box-shadow: 0 -10px 24px -14px rgba(11, 34, 64, 0.45); }
+  .dock .btn { min-height: 56px; padding: 4px 8px; border-radius: 14px; box-shadow: none; gap: 8px; }
+  .dock .btn .i { font-size: 1.5rem; }
+  .dock .btn-wa { background: #1FA855; color: #fff; }
+}
+
+/* ---------- brand headline ---------- */
+.brandline { font-family: var(--font-display); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; color: #fff; text-shadow: 0 6px 26px rgba(0, 0, 0, 0.38); display: grid; justify-items: center; gap: 6px; margin: 6px 0 0; }
+.brandline .l1 { font-size: clamp(3.5rem, 14vw, 7.2rem); }
+.brandline .l2 { font-size: clamp(1.8rem, 6.6vw, 3.4rem); letter-spacing: 0.01em; color: #FFE3A3; }
+.brandline .wd { display: inline-block; margin-inline: 0.12em; }
+.brandline .gulf { color: var(--sun); }
+.ltr { display: inline-block; }
+.tag .ur { font-size: clamp(1.25rem, 3.6vw, 1.7rem); font-weight: 700; line-height: 1.9; }
+.tag .en { font-weight: 600; font-size: 1rem; opacity: 0.92; }
+.hero .stars { position: absolute; inset: 0 0 50% 0; pointer-events: none; }
+.hero .stars i { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff; opacity: 0.75; }
+.cloud { position: absolute; height: 44px; border-radius: 50px; background: rgba(255, 255, 255, 0.14); pointer-events: none; }
+.cloud::before, .cloud::after { content: ""; position: absolute; background: inherit; border-radius: 50%; }
+.cloud::before { width: 54px; height: 54px; left: 24px; top: -26px; }
+.cloud::after { width: 72px; height: 72px; right: 26px; top: -36px; }
+.c1 { width: 190px; top: 250px; left: 5%; }
+.c2 { width: 150px; top: 380px; right: 6%; }
+.birds { position: absolute; top: 90px; left: 0; right: 0; height: 80px; pointer-events: none; }
+.bird { position: absolute; width: 28px; height: 13px; stroke: rgba(255, 255, 255, 0.9); fill: none; stroke-width: 2; stroke-linecap: round; }
+.b1 { left: 14%; top: 10px; } .b2 { left: 22%; top: 38px; width: 22px; } .b3 { left: 78%; top: 24px; }
+.palm { transform-origin: 0 0; }
+.scene .pl { transform-origin: 446px 208px; }
+.scene .pr { transform-origin: 757px 224px; }
+.btn-wa { background: #1FA855; color: #fff; box-shadow: 0 6px 0 #167C3E; }
+.btn-wa:hover { background: #22B85E; }
+
+/* ---------- interactive pieces ---------- */
+.tap { display: inline-flex; align-items: center; gap: 10px; color: var(--sun-text); font-weight: 700; }
+.tap::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--sun); flex: none; }
+.tap .ur { line-height: 1.8; }
+.tap .en { display: inline; margin-inline-start: 2px; }
+button.service, button.dest { font: inherit; color: inherit; cursor: pointer; width: 100%; }
+button.service { color: var(--ink); }
+.service { border-width: 2px; }
+.service:hover { border-color: var(--c); }
+.service[aria-pressed="true"] { border-color: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 28%, transparent); }
+.service h3 { display: block; }
+button.dest { border: 0; }
+.dest[aria-pressed="true"] { outline: 4px solid var(--sun); outline-offset: 3px; }
+.dest .ar { display: block; transition: transform 0.2s ease; }
+.dest:hover .ar { transform: scale(1.12); }
+.svc-action { margin-top: 22px; background: var(--surface); border: 2px solid var(--sun); border-radius: 22px; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; justify-content: center; }
+.svc-action[hidden] { display: none; }
+.svc-action .nm { text-align: center; min-width: 0; }
+.svc-action .nm .ur { font-size: 1.25rem; font-weight: 700; line-height: 1.8; }
+.svc-action .btn { min-height: 54px; }
+
+.route { position: relative; height: 12px; border-radius: 999px; background: var(--surface-2); margin: 10px 0 42px; border: 1px solid var(--line); }
+.route-fill { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--sun), var(--sun-deep)); }
+.route-plane { position: absolute; top: 50%; left: 0; width: 46px; height: 46px; margin: -23px 0 0 -23px; color: var(--ocean); }
+.route-plane svg { width: 100%; height: 100%; fill: currentColor; transform: rotate(90deg); filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)); }
+.steps { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 30px 14px; }
+.steps li { cursor: pointer; padding: 32px 8px 20px; border-width: 2px; }
+.steps li h3 .ur { font-size: 1.02rem; }
+.steps li.active { border-color: var(--sun); background: color-mix(in srgb, var(--sun) 14%, var(--surface)); }
+.steps li.active .i { color: var(--sun-deep); }
+.steps li.done::before { content: "\2713"; background: var(--green); color: #fff; }
+@media (max-width: 1000px) { .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .route-plane { width: 38px; height: 38px; margin: -19px 0 0 -19px; } }
+
+.picked { text-align: center; margin: 0 auto 14px; font-weight: 700; background: color-mix(in srgb, var(--green) 14%, var(--surface)); border: 2px solid var(--green); border-radius: 999px; padding: 4px 16px; width: fit-content; max-width: 100%; }
+.picked[hidden] { display: none; }
+.picked .ur { display: inline; line-height: 1.8; }
+.okmark { width: 76px; height: 76px; margin: 0 auto 4px; display: block; }
+.okmark circle, .okmark path { fill: none; stroke: var(--green); stroke-linecap: round; stroke-linejoin: round; }
+.okmark circle { stroke-width: 5; }
+.okmark path { stroke-width: 6; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); background: var(--ink); color: var(--bg); padding: 6px 22px; border-radius: 999px; font-weight: 700; z-index: 70; opacity: 0; pointer-events: none; text-align: center; max-width: calc(100vw - 32px); transition: opacity 0.25s ease, transform 0.25s ease; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+.toast .ur { display: inline; line-height: 1.9; }
+@media (max-width: 760px) { .toast { bottom: calc(100px + env(safe-area-inset-bottom, 0px)); } }
+
+/* ---------- motion (only for people who have not asked for less) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .ltr { animation: drop 0.75s cubic-bezier(0.2, 0.9, 0.3, 1.3) both; animation-delay: calc(var(--i) * 55ms + 0.15s); }
+  @keyframes drop { from { transform: translateY(-46px) scale(0.5); opacity: 0; } to { transform: none; opacity: 1; } }
+  .hero-inner > .badge { animation: pop 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.4) both; }
+  .hero-inner > .tag { animation: up 0.7s 0.9s both; }
+  .hero-inner > .chip { animation: up 0.7s 1.1s both; }
+  .hero-inner > .hero-actions { animation: up 0.7s 1.3s both; }
+  @keyframes up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+  @keyframes pop { from { transform: scale(0.4); opacity: 0; } to { transform: none; opacity: 1; } }
+  .hero .stars i { animation: twinkle 3.2s ease-in-out infinite; }
+  @keyframes twinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+  .cloud.c1 { animation: drift 46s linear infinite alternate; }
+  .cloud.c2 { animation: drift 62s linear infinite alternate-reverse; }
+  @keyframes drift { from { transform: translateX(-40px); } to { transform: translateX(90px); } }
+  .bird { animation: glide 30s linear infinite; }
+  .b2 { animation-duration: 36s; animation-delay: -9s; } .b3 { animation-duration: 42s; animation-delay: -20s; }
+  @keyframes glide { from { transform: translateX(-80px); } to { transform: translateX(100vw); } }
+  .scene .sun { animation: rise 2.4s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  @keyframes rise { from { transform: translateY(90px); } to { transform: none; } }
+  .scene .glow { animation: glowpulse 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  @keyframes glowpulse { 0%, 100% { opacity: 0.75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+  .scene .pl { animation: palm 6s ease-in-out infinite; }
+  .scene .pr { animation: palm 7.5s ease-in-out infinite reverse; }
+  @keyframes palm { 0%, 100% { transform: rotate(-1.6deg); } 50% { transform: rotate(1.6deg); } }
+  .wv1 { animation: sway 11s linear infinite; }
+  .wv2 { animation: sway 15s linear infinite reverse; }
+  .wv3 { animation: sway 8s linear infinite; }
+  @keyframes sway { to { transform: translateX(-280px); } }
+
+  .rv { transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .js .rv:not(.in) { transform: translateY(30px) scale(0.97); }
+  .service, .dest, .steps li { transition: transform 0.25s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
+  .service:hover { transform: translateY(-7px); }
+  .service:hover .ico, .service[aria-pressed="true"] .ico { animation: wob 0.6s ease; }
+  @keyframes wob { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg) scale(1.08); } 60% { transform: rotate(8deg) scale(1.08); } }
+  .dest:hover { transform: translateY(-6px) rotate(-1deg); }
+  .dest:active, .service:active { transform: scale(0.97); }
+  .svc-action:not([hidden]) { animation: pop 0.35s both; }
+  .steps li.active { transform: translateY(-8px) scale(1.04); }
+  .steps li.active .i { animation: bob 0.9s ease-in-out infinite; }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+  .route-fill { transition: width 0.9s ease; }
+  .route-plane { transition: left 0.9s ease; }
+  .trust .i { animation: bob 3.4s ease-in-out infinite; }
+  .trust div:nth-child(2) .i { animation-delay: -0.8s; } .trust div:nth-child(3) .i { animation-delay: -1.6s; } .trust div:nth-child(4) .i { animation-delay: -2.4s; }
+  .hero-actions .btn-green, .big-num .btn-green { animation: ring 2.4s ease-out infinite; }
+  @keyframes ring { 0% { box-shadow: 0 6px 0 var(--green-deep), 0 0 0 0 rgba(18, 146, 75, 0.55); } 70%, 100% { box-shadow: 0 6px 0 var(--green-deep), 0 0 0 20px rgba(18, 146, 75, 0); } }
+  .header-call .i { animation: wiggle 2.6s ease-in-out infinite; transform-origin: 50% 50%; }
+  @keyframes wiggle { 0%, 70%, 100% { transform: rotate(0); } 75% { transform: rotate(-16deg); } 85% { transform: rotate(14deg); } 92% { transform: rotate(-8deg); } }
+  .panel:not([hidden]) .tile { animation: pop 0.4s both; }
+  .panel:not([hidden]) .tile:nth-child(2) { animation-delay: 40ms; } .panel:not([hidden]) .tile:nth-child(3) { animation-delay: 80ms; }
+  .panel:not([hidden]) .tile:nth-child(4) { animation-delay: 120ms; } .panel:not([hidden]) .tile:nth-child(5) { animation-delay: 160ms; }
+  .panel:not([hidden]) .tile:nth-child(6) { animation-delay: 200ms; } .panel:not([hidden]) .tile:nth-child(7) { animation-delay: 240ms; }
+  .panel:not([hidden]) .tile:nth-child(8) { animation-delay: 280ms; } .panel:not([hidden]) .tile:nth-child(9) { animation-delay: 320ms; }
+  .tile:hover { transform: translateY(-4px); }
+  .tile[aria-pressed="true"] .i { animation: wob 0.5s ease; }
+  .tap::before { animation: ping 1.4s ease-out infinite; }
+  @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(245, 163, 26, 0.7); } 100% { box-shadow: 0 0 0 16px rgba(245, 163, 26, 0); } }
+  .okmark circle { stroke-dasharray: 190; stroke-dashoffset: 190; animation: draw 0.7s 0.1s forwards; }
+  .okmark path { stroke-dasharray: 60; stroke-dashoffset: 60; animation: draw 0.5s 0.7s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .tip:hover .i { animation: bob 0.7s ease-in-out infinite; }
+}
+
+/* ---------- licence plate at the top of the hero ---------- */
+.licplate { position: relative; overflow: hidden; display: flex; align-items: center; gap: 14px; padding: 10px 26px 10px 10px; border-radius: 22px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.07)); border: 2px solid rgba(255, 210, 110, 0.95); box-shadow: 0 12px 34px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(255, 255, 255, 0.18); text-align: start; max-width: 100%; margin-bottom: 4px; }
+.licplate::after { content: ""; position: absolute; top: 0; bottom: 0; width: 60px; left: -90px; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent); transform: skewX(-18deg); pointer-events: none; }
+.seal { width: 78px; height: 78px; flex: none; overflow: visible; }
+.seal .s-bg { fill: rgba(7, 26, 51, 0.7); stroke: #FFD27A; stroke-width: 2; }
+.seal .s-ring { transform-origin: 60px 60px; }
+.seal text { font-family: var(--font-body); font-weight: 700; font-size: 9.2px; fill: #FFE3A3; }
+.seal .s-in { fill: #F5A31A; }
+.seal .s-tick { fill: none; stroke: #0B2240; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.lic-txt { display: grid; gap: 1px; min-width: 0; color: #fff; }
+.lic-label .ur { font-size: 1rem; line-height: 1.7; color: #FFE3A3; font-weight: 700; }
+.lic-label .en { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; font-weight: 600; }
+.lic-no { font-family: var(--font-mono); font-weight: 500; font-size: clamp(0.86rem, 3.5vw, 1.32rem); letter-spacing: 0.02em; color: #fff; overflow-wrap: anywhere; margin-top: 2px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+.lic-sub { font-size: 0.78rem; opacity: 0.9; font-weight: 600; }
+@media (max-width: 420px) { .licplate { flex-direction: column; text-align: center; padding: 14px 18px; gap: 6px; } .seal { width: 70px; height: 70px; } }
+
+/* ---------- hero extras ---------- */
+.rays { position: absolute; left: 50%; bottom: 70px; width: 1600px; height: 1600px; margin-left: -800px; margin-bottom: -800px; background: repeating-conic-gradient(from 0deg, rgba(255, 226, 154, 0.2) 0deg 5deg, transparent 5deg 15deg); -webkit-mask-image: radial-gradient(circle, #000 0, transparent 60%); mask-image: radial-gradient(circle, #000 0, transparent 60%); pointer-events: none; z-index: 0; }
+.hero .hero-inner > .badge { position: relative; }
+.hero .hero-inner > .badge::after { content: ""; position: absolute; inset: -11px; border-radius: 50%; border: 2px dashed rgba(255, 226, 154, 0.9); }
+.swoosh { width: min(270px, 62vw); height: auto; fill: none; stroke: var(--sun); stroke-width: 4; stroke-linecap: round; margin-top: 2px; }
+
+/* ---------- trust card ---------- */
+.trust { margin-top: -78px; position: relative; z-index: 5; background: var(--surface); border: 2px solid var(--sun); border-radius: 24px; padding: 20px 12px 16px; gap: 6px; box-shadow: 0 24px 46px -24px rgba(11, 34, 64, 0.6); }
+.trust > div { padding: 4px; gap: 4px; }
+.tkw { position: relative; width: 64px; height: 64px; border-radius: 50%; background: var(--surface-2); display: grid; place-items: center; margin-bottom: 4px; }
+.trust .tkw .i { font-size: 1.9rem; color: var(--ocean); }
+.tkb { position: absolute; right: -5px; bottom: -3px; width: 28px; height: 28px; border-radius: 50%; background: var(--green); border: 3px solid var(--surface); display: grid; place-items: center; }
+.tkb svg { width: 100%; height: 100%; fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; padding: 3px; }
+.trust .en { font-size: 0.8rem; }
+
+/* ---------- route map ---------- */
+.mapcard { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 10px; margin-bottom: 22px; box-shadow: 0 18px 38px -26px rgba(11, 34, 64, 0.5); }
+#routeMap { width: 100%; height: auto; display: block; }
+#routeMap .dotc { fill: var(--line); }
+#routeMap .rt { fill: none; stroke: var(--c); stroke-width: 3; stroke-dasharray: 8 8; opacity: 0.65; stroke-linecap: round; }
+#routeMap .route-g { cursor: pointer; }
+#routeMap .route-g.on .rt { stroke-width: 5; opacity: 1; }
+#routeMap .mp { fill: var(--c); stroke: #fff; stroke-width: 1.5; stroke-linejoin: round; }
+#routeMap .hit { fill: transparent; }
+#routeMap .pin { fill: var(--c); stroke: #fff; stroke-width: 3; }
+#routeMap .ring { fill: none; stroke: var(--c); stroke-width: 2.5; transform-box: fill-box; transform-origin: center; opacity: 0.6; }
+#routeMap .ring.o { stroke: var(--sun-deep); }
+#routeMap .opin { fill: var(--sun); stroke: #fff; stroke-width: 3; }
+#routeMap .pl { font-family: var(--font-body); font-weight: 700; font-size: 25px; fill: var(--ink); }
+#routeMap .route-g.on .pl { fill: var(--c); }
+#routeMap .route-g:focus-visible { outline: none; }
+#routeMap .route-g:focus-visible .pin { stroke: var(--sun); }
+
+/* ---------- motion ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-inner > .licplate { animation: up 0.8s both; }
+  .licplate::after { animation: shine 4.5s 1.6s ease-in-out infinite; }
+  @keyframes shine { 0% { left: -90px; } 38%, 100% { left: calc(100% + 40px); } }
+  .lic-no { animation: reveal 1.7s steps(34) 0.5s both; }
+  @keyframes reveal { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  .seal .s-ring { animation: spin 22s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .seal .s-tick { stroke-dasharray: 70; stroke-dashoffset: 70; animation: draw 0.7s 0.7s forwards; }
+  .seal .s-in { animation: pop 0.6s 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.4) both; transform-box: fill-box; transform-origin: center; }
+  .rays { animation: spin 90s linear infinite; }
+  .hero .hero-inner > .badge::after { animation: spin 16s linear infinite; }
+  .swoosh path { stroke-dasharray: 300; stroke-dashoffset: 300; animation: draw 1.1s 1.5s ease-out forwards; }
+  .trust .tkb { transform: scale(0.2); opacity: 0; }
+  .trust.in .tkb { animation: pop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.5) both; animation-delay: calc(0.5s + var(--n) * 0.25s); }
+  .trust.in > div:nth-child(1) .tkb { animation-delay: 0.5s; } .trust.in > div:nth-child(2) .tkb { animation-delay: 0.75s; }
+  .trust.in > div:nth-child(3) .tkb { animation-delay: 1s; } .trust.in > div:nth-child(4) .tkb { animation-delay: 1.25s; }
+  #routeMap .rt { animation: flow 1.5s linear infinite; }
+  @keyframes flow { to { stroke-dashoffset: -32; } }
+  #routeMap .ring { animation: ripple 2.4s ease-out infinite; }
+  #routeMap .route-g:nth-of-type(2) .ring { animation-delay: -0.6s; } #routeMap .route-g:nth-of-type(3) .ring { animation-delay: -1.2s; } #routeMap .route-g:nth-of-type(4) .ring { animation-delay: -1.8s; }
+  @keyframes ripple { 0% { transform: scale(0.8); opacity: 0.8; } 100% { transform: scale(2.6); opacity: 0; } }
+  #routeMap .route-g:hover .pin, #routeMap .route-g.on .pin { transform: scale(1.25); transform-box: fill-box; transform-origin: center; transition: transform 0.2s ease; }
+}
+@media (prefers-reduced-motion: reduce) { #routeMap .mp { display: none; } }
+
+/* ---------- header: logo at the start ---------- */
+.site-header .wrap { min-height: 82px; transition: min-height 0.25s ease; gap: 18px; }
+.site-header.compact .wrap { min-height: 62px; }
+.site-header .brand .badge { width: 60px; height: 60px; border-width: 3px; position: relative; transition: width 0.25s ease, height 0.25s ease; }
+.site-header.compact .brand .badge { width: 44px; height: 44px; }
+.site-header .brand .badge::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px dashed var(--sun); opacity: 0.9; }
+.brand-name { font-size: 1.25rem; }
+.brand-name small.lic-mini { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.01em; color: var(--sun-text); }
+.main-nav { display: flex; gap: 24px; margin-inline-start: auto; }
+.main-nav a { text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--muted); padding: 8px 0; position: relative; }
+.main-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 3px; border-radius: 3px; background: var(--sun); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+.main-nav a:hover, .main-nav a.act { color: var(--ink); }
+.main-nav a:hover::after, .main-nav a.act::after { transform: scaleX(1); }
+.progress { position: absolute; left: 0; bottom: -1px; height: 4px; width: 0; background: linear-gradient(90deg, var(--sun), var(--sun-deep)); border-radius: 0 4px 4px 0; }
+@media (max-width: 1020px) { .main-nav { display: none; } }
+@media (max-width: 700px) { .brand-name small.lic-mini { display: none; } .site-header .wrap { min-height: 72px; } .site-header .brand .badge { width: 52px; height: 52px; } .brand-name { font-size: 1.1rem; } }
+@media (max-width: 380px) { .brand-name { font-size: 1rem; } }
+
+/* ---------- documents checklist ---------- */
+.docs { max-width: 820px; margin: 0 auto; background: var(--surface); border: 2px solid var(--line); border-radius: 26px; padding: 22px; display: grid; gap: 20px; }
+.docs .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.docs .tile .ur { font-size: 1rem; }
+.tile { position: relative; }
+.tile[aria-pressed="true"]::after { content: "\2713"; position: absolute; top: 6px; right: 6px; width: 26px; height: 26px; border-radius: 50%; background: var(--green); color: #fff; font-weight: 800; display: grid; place-items: center; font-size: 0.95rem; }
+.docs-meter { position: relative; display: grid; gap: 12px; }
+.dm-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.dm-count { font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; }
+.dm-top .ur { font-size: 1.1rem; font-weight: 700; line-height: 1.9; }
+.dm-bar { height: 16px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); overflow: hidden; }
+.dm-fill { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--green), #3DBE7B); transition: width 0.5s ease; }
+.dm-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 4px; }
+.dm-actions [hidden] { display: none; }
+.confetti { position: absolute; left: 50%; top: 0; width: 0; height: 0; pointer-events: none; }
+.confetti i { position: absolute; width: 9px; height: 14px; border-radius: 2px; }
+@media (max-width: 520px) { .docs { padding: 14px 10px; } .docs .tiles { gap: 8px; } }
+
+/* ---------- licence check card ---------- */
+.cert { max-width: 880px; margin: 0 auto; background: var(--surface); border: 2px solid var(--sun); border-radius: 26px; padding: 26px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 22px 28px; align-items: center; box-shadow: 0 0 0 6px color-mix(in srgb, var(--sun) 18%, transparent), 0 26px 50px -30px rgba(11, 34, 64, 0.55); }
+.cert-logo .badge { width: 130px; height: 130px; border-width: 4px; position: relative; display: block; }
+.cert-logo .badge::after { content: ""; position: absolute; inset: -10px; border-radius: 50%; border: 2px dashed var(--sun); }
+.cert-fields { margin: 0; display: grid; gap: 10px; }
+.cert-fields div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+.cert-fields dt { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.cert-fields dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+.cert-fields dd.mono { font-family: var(--font-mono); font-weight: 500; background: var(--surface-2); border-radius: 8px; padding: 6px 10px; }
+.cert-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn-line { background: transparent; color: var(--ink); border: 2px solid var(--ink); box-shadow: none; }
+.btn-line:hover { background: var(--ink); color: var(--bg); }
+.vsteps { grid-column: 1 / -1; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: v; }
+.vsteps li { counter-increment: v; text-align: center; background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 14px 10px; display: grid; gap: 2px; justify-items: center; }
+.vsteps li::before { content: counter(v); width: 30px; height: 30px; border-radius: 50%; background: var(--sun); color: #1B1204; font-family: var(--font-display); font-weight: 800; display: grid; place-items: center; margin-bottom: 4px; }
+.vsteps .ur { font-size: 1rem; font-weight: 700; line-height: 1.8; }
+.cert .status { grid-column: 1 / -1; margin: 0; }
+@media (max-width: 720px) { .cert { grid-template-columns: minmax(0, 1fr); justify-items: center; padding: 22px 16px; } .cert-fields { width: 100%; } .cert-fields div { grid-template-columns: minmax(0, 1fr); gap: 2px; } .vsteps { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- quick contact button (desktop) ---------- */
+.fab { display: none; }
+@media (min-width: 761px) {
+  .fab { display: grid; position: fixed; right: max(24px, env(safe-area-inset-right, 0px)); bottom: calc(24px + env(safe-area-inset-bottom, 0px)); z-index: 55; gap: 12px; justify-items: end; }
+  .fab-main { width: 64px; height: 64px; border-radius: 50%; border: 0; background: var(--green); color: #fff; font-size: 1.9rem; cursor: pointer; display: grid; place-items: center; box-shadow: 0 6px 0 var(--green-deep), 0 14px 30px rgba(0, 0, 0, 0.3); }
+  .fab { pointer-events: none; }
+  .fab-main, .fab.open .fab-menu { pointer-events: auto; }
+  .fab-main .i { transition: transform 0.25s ease; }
+  .fab.open .fab-main .i { transform: rotate(45deg); }
+  .fab-menu { display: grid; gap: 10px; justify-items: end; visibility: hidden; opacity: 0; transform: translateY(14px); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s; }
+  .fab.open .fab-menu { visibility: visible; opacity: 1; transform: none; }
+  .fab-item { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .fab-item .fl { background: var(--ink); color: var(--bg); font-weight: 700; font-size: 0.9rem; padding: 6px 14px; border-radius: 999px; }
+  .fab-item .fc { width: 52px; height: 52px; border-radius: 50%; background: var(--c); color: #fff; display: grid; place-items: center; font-size: 1.5rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-header .brand .badge::after, .cert-logo .badge::after { animation: spin 20s linear infinite; }
+  .site-header .brand:hover .badge { animation: wob 0.6s ease; }
+  .confetti i { animation: confetti 1.3s ease-out forwards; }
+  @keyframes confetti { 0% { transform: translate(0, 0) rotate(0); opacity: 1; } 100% { transform: translate(var(--x), var(--y)) rotate(var(--r)); opacity: 0; } }
+  .fab-main { animation: ring 2.6s ease-out infinite; }
+  .cert.in { animation: certglow 2.4s ease-out 0.4s 1; }
+  @keyframes certglow { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--sun) 60%, transparent), 0 26px 50px -30px rgba(11, 34, 64, 0.55); } 100% { box-shadow: 0 0 0 28px color-mix(in srgb, var(--sun) 0%, transparent), 0 26px 50px -30px rgba(11, 34, 64, 0.55); } }
+}
+
+/* ---------- hero lockup: logo at the left of the name ---------- */
+.brandrow { display: flex; align-items: center; justify-content: center; gap: clamp(14px, 3.4vw, 38px); width: 100%; max-width: 100%; margin-top: 6px; }
+.brandrow .badge { width: clamp(76px, 16vw, 170px); height: clamp(76px, 16vw, 170px); flex: none; position: relative; border-width: 4px; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4); }
+.brandrow .badge::after { content: ""; position: absolute; inset: -12px; border-radius: 50%; border: 2px dashed rgba(255, 226, 154, 0.9); }
+.brandrow .brandline { margin: 0; justify-items: start; text-align: left; min-width: 0; }
+.brandline .l1 { font-size: clamp(2.1rem, 9.2vw, 6.2rem); white-space: nowrap; }
+.brandline .l2 { font-size: clamp(1.3rem, 4.9vw, 3.2rem); }
+.brandline .wd:first-child { margin-inline-start: 0; }
+.brandline .amp { color: #FFE3A3; margin-inline: 0.06em; }
+.brandrow .swoosh { justify-self: start; width: min(260px, 100%); }
+@media (prefers-reduced-motion: no-preference) {
+  .brandrow .badge { animation: pop 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.4) both; }
+  .brandrow .badge::after { animation: spin 16s linear infinite; }
+}
+
+/* ---------- phone layout ---------- */
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+body { overflow-x: clip; -webkit-tap-highlight-color: transparent; }
+a, button { touch-action: manipulation; }
+@media (max-width: 760px) { html { scroll-padding-top: 80px; } }
+@media (max-width: 640px) {
+  .hero-inner { padding-block: 26px 250px; gap: 14px; }
+  .hero-actions { width: 100%; gap: 14px; }
+  .hero-actions .btn { flex: 1 1 100%; }
+  .tag .ur { font-size: 1.2rem; }
+  .trust .ur { font-size: 0.95rem; }
+  .svc-action .btn, .cert-actions .btn, .result-actions .row .btn, .dm-actions .btn { flex: 1 1 100%; }
+  .band .btn-row .btn { flex: 1 1 100%; }
+  .steps li h3 .ur { font-size: 0.95rem; }
+  .dest .ar { font-size: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .site-header .wrap { gap: 10px; min-height: 68px; }
+  .site-header .brand { gap: 10px; }
+  .site-header .brand .badge { width: 48px; height: 48px; }
+  .site-header.compact .brand .badge { width: 42px; height: 42px; }
+  .brand-name { font-size: 0.98rem; white-space: nowrap; }
+  .header-call { min-width: 50px; padding: 4px 12px; }
+  .header-call .txt { display: none; }
+  .header-call .i { font-size: 1.5rem; }
+  .tile .ur { font-size: 0.92rem; line-height: 1.7; }
+  .tile .en { font-size: 0.68rem; }
+  .tile { min-height: 100px; padding: 10px 4px; }
+  .phone-field input { font-size: 1.4rem; }
+  .big-num .num { font-size: clamp(1.5rem, 8vw, 2.2rem); }
+  .licplate .lic-no { font-size: 0.92rem; }
+}
+@media (max-width: 440px) { .docs .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 350px) { .brand-name { font-size: 0.88rem; } .brandline .l1 { font-size: 2rem; } }
+@media (orientation: landscape) and (max-height: 520px) { .hero-inner { padding-block: 20px 240px; } .dock { padding-block: 6px; } }
+
+/* ---------- hamburger menu ---------- */
+.menu-btn { display: none; flex: none; width: 50px; height: 50px; border-radius: 14px; border: 2px solid var(--line); background: var(--surface); cursor: pointer; align-items: center; justify-content: center; padding: 0; color: var(--ink); }
+.menu-btn:hover { border-color: var(--sun); }
+.menu-btn .bars { display: grid; gap: 5px; width: 24px; }
+.menu-btn .bars i { display: block; height: 3px; border-radius: 3px; background: currentColor; }
+.menu-btn .bars i:nth-child(2) { width: 70%; justify-self: end; }
+.scrim { position: fixed; inset: 0; z-index: 75; background: rgba(5, 18, 34, 0.6); opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; z-index: 80; width: min(88vw, 400px); background: var(--bg); border-left: 3px solid var(--sun); display: flex; flex-direction: column; gap: 14px; padding: calc(14px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) 16px; overflow-y: auto; overscroll-behavior: contain; transform: translateX(104%); visibility: hidden; transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.35s; box-shadow: -24px 0 50px rgba(0, 0, 0, 0.35); }
+html.menu-open .scrim { opacity: 1; visibility: visible; }
+html.menu-open .drawer { transform: none; visibility: visible; }
+html.menu-open, html.menu-open body { overflow: hidden; }
+.drawer-head { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.drawer-head .badge { width: 52px; height: 52px; border-width: 3px; }
+.dn { flex: 1; min-width: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; line-height: 1.15; }
+.dn small { display: block; font-family: var(--font-mono); font-weight: 500; font-size: 0.64rem; color: var(--sun-text); margin-top: 3px; overflow-wrap: anywhere; }
+.drawer-x { flex: none; width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--line); background: var(--surface); color: var(--ink); font-size: 1.5rem; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.drawer-x:hover { border-color: var(--sun-deep); }
+.drawer-nav { display: grid; gap: 8px; }
+.drawer-nav a { display: flex; align-items: center; gap: 14px; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 8px 14px 8px 8px; min-height: 62px; color: var(--ink); }
+.drawer-nav a:hover, .drawer-nav a:active { border-color: var(--c); }
+.drawer-nav .di { width: 46px; height: 46px; border-radius: 14px; background: var(--c); color: #fff; display: grid; place-items: center; font-size: 1.5rem; flex: none; }
+.drawer-nav .dt { display: grid; min-width: 0; text-align: start; }
+.drawer-nav .dt .ur { font-size: 1.12rem; font-weight: 700; line-height: 1.75; }
+.drawer-nav .dt .en { font-size: 0.78rem; font-weight: 600; }
+.drawer-cta { display: grid; gap: 12px; margin-top: auto; padding-top: 6px; }
+.drawer-cta .btn { width: 100%; box-shadow: none; }
+.drawer-cta .btn-green { box-shadow: 0 5px 0 var(--green-deep); }
+.drawer-cta .btn-wa { box-shadow: 0 5px 0 #167C3E; }
+@media (max-width: 1020px) {
+  .menu-btn { display: inline-flex; }
+  .header-call { margin-inline-start: auto; }
+}
+@media (max-width: 560px) {
+  .header-call { display: none; }
+  .menu-btn { margin-inline-start: auto; }
+}
+@media (min-width: 1021px) { .scrim, .drawer { display: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  html.menu-open .drawer-nav a { animation: dslide 0.4s both; }
+  html.menu-open .drawer-nav a:nth-child(1) { animation-delay: 0.08s; } html.menu-open .drawer-nav a:nth-child(2) { animation-delay: 0.12s; }
+  html.menu-open .drawer-nav a:nth-child(3) { animation-delay: 0.16s; } html.menu-open .drawer-nav a:nth-child(4) { animation-delay: 0.2s; }
+  html.menu-open .drawer-nav a:nth-child(5) { animation-delay: 0.24s; } html.menu-open .drawer-nav a:nth-child(6) { animation-delay: 0.28s; }
+  html.menu-open .drawer-nav a:nth-child(7) { animation-delay: 0.32s; } html.menu-open .drawer-nav a:nth-child(8) { animation-delay: 0.36s; }
+  @keyframes dslide { from { transform: translateX(36px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .menu-btn:active .bars i { transform: scaleX(0.8); }
+}
+@media (prefers-reduced-motion: reduce) { .drawer, .scrim { transition: none; } }
+
+/* ---------- office hours ---------- */
+.hours { grid-column: 1 / -1; background: var(--surface); border: 2px solid var(--line); border-radius: 22px; padding: 20px; display: grid; gap: 14px; }
+.hours-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.hours .hi { width: 52px; height: 52px; border-radius: 16px; background: var(--c-blue); color: #fff; display: grid; place-items: center; font-size: 1.7rem; flex: none; }
+.hours .ht { display: grid; min-width: 0; margin-inline-end: auto; }
+.pill { display: inline-flex; align-items: center; gap: 10px; padding: 4px 16px 4px 12px; border-radius: 999px; border: 2px solid var(--line); background: var(--bg); font-weight: 700; max-width: 100%; }
+.pill .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--muted); flex: none; }
+.pill .pt { display: grid; min-width: 0; }
+.pill .pt .ur { font-size: 1rem; line-height: 1.75; }
+.pill .pt .ur:empty { display: none; }
+.pill .pt .en { font-size: 0.8rem; opacity: 1; }
+.pill.open { border-color: var(--green); background: color-mix(in srgb, var(--green) 14%, var(--surface)); }
+.pill.open .dot { background: var(--green); }
+.pill.closed { border-color: #C62828; background: color-mix(in srgb, #C62828 10%, var(--surface)); }
+.pill.closed .dot { background: #C62828; }
+.hours-main { text-align: center; }
+.hours-main .ur { font-size: 1.15rem; font-weight: 700; line-height: 1.9; }
+.hours-main .en { font-weight: 600; }
+.week { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+.wk { text-align: center; border-radius: 14px; border: 2px solid var(--line); background: var(--bg); padding: 8px 2px; display: grid; justify-items: center; gap: 0; min-width: 0; }
+.wk .ur { font-size: 0.92rem; font-weight: 700; line-height: 1.7; }
+.wk .en { font-size: 0.7rem; font-weight: 700; opacity: 0.75; }
+.wk .tm { font-family: var(--font-mono); font-size: 0.72rem; margin-top: 4px; color: var(--green-deep); font-weight: 500; }
+.wk.off { opacity: 0.55; }
+.wk.off .tm { color: var(--muted); }
+.wk:not(.off) { background: color-mix(in srgb, var(--green) 12%, var(--surface)); border-color: color-mix(in srgb, var(--green) 45%, var(--line)); }
+.wk.today { border-color: var(--sun); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sun) 40%, transparent); opacity: 1; }
+.wk.today .en::after { content: " \2022"; color: var(--sun-deep); }
+.hours-note { text-align: center; color: var(--muted); font-size: 0.9rem; }
+.hours-note .ur { font-size: 0.98rem; line-height: 1.9; }
+.hours-note[hidden] { display: none; }
+.drawer-cta .pill { justify-self: center; }
+.foot-hours { margin: 0; }
+@media (max-width: 520px) { .week { gap: 5px; } .wk .ur { font-size: 0.8rem; } .wk .tm { font-size: 0.64rem; } .hours { padding: 16px 12px; } .hours-top { justify-content: center; text-align: center; } .hours .ht { margin-inline-end: 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  .pill.open .dot { animation: ping2 1.8s ease-out infinite; }
+  @keyframes ping2 { 0% { box-shadow: 0 0 0 0 rgba(18, 146, 75, 0.7); } 100% { box-shadow: 0 0 0 12px rgba(18, 146, 75, 0); } }
+}
+
+/* ---------- services: 7 cards ---------- */
+:root { --c-gold: #C98F00; }
+#svcGrid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+#svcGrid .service { grid-column: span 2; }
+#svcGrid .service:nth-child(5) { grid-column: 2 / span 2; }
+@media (max-width: 900px) {
+  #svcGrid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  #svcGrid .service:nth-child(5) { grid-column: span 2; }
+  #svcGrid .service:nth-child(7) { grid-column: 3 / span 2; }
+}
+@media (max-width: 560px) {
+  #svcGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  #svcGrid .service, #svcGrid .service:nth-child(5) { grid-column: span 1; }
+  #svcGrid .service:nth-child(7) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); }
+}
+
+/* ---------- licence check ---------- */
+.verify-btn { min-height: 70px; padding-inline: 26px; }
+.verify-btn .txt .ur { font-size: 1.25rem; }
+.cert-actions .btn { flex: 1 1 260px; max-width: 100%; }
+.vnote { grid-column: 1 / -1; text-align: center; color: var(--muted); font-size: 0.88rem; margin: 0; }
+.lic-verify { justify-self: start; display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; background: var(--sun); color: #1B1204; font-weight: 700; font-size: 0.8rem; padding: 4px 14px; border-radius: 999px; text-decoration: none; }
+.lic-verify .ur { display: inline; font-size: 0.92rem; line-height: 1.7; }
+.lic-verify .en { display: inline; opacity: 1; font-size: 0.78rem; }
+.lic-verify:hover { background: #FFB63A; }
+@media (max-width: 420px) { .lic-verify { justify-self: center; } }
+
+/* ---------- quick tiles ---------- */
+.quickwrap { padding-top: 28px; }
+.qtitle { text-align: center; margin-bottom: 14px; }
+.qtitle .ur { font-size: 1.5rem; font-weight: 700; line-height: 1.9; }
+.qtitle .en { font-family: var(--font-display); font-weight: 800; opacity: 0.75; }
+.quick { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.qa { text-decoration: none; color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 24px; padding: 18px 8px 14px; text-align: center; display: grid; justify-items: center; gap: 2px; min-width: 0; }
+.qa .qi { width: 80px; height: 80px; border-radius: 26px; background: var(--c); color: #fff; display: grid; place-items: center; font-size: 2.4rem; box-shadow: 0 12px 22px -12px var(--c); margin-bottom: 6px; }
+.qa .ur { font-size: 1.15rem; font-weight: 700; line-height: 1.8; }
+.qa .en { font-size: 0.8rem; font-weight: 700; }
+.qa:hover, .qa:focus-visible { border-color: var(--c); }
+@media (max-width: 760px) { .quick { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .qa .qi { width: 72px; height: 72px; font-size: 2.1rem; } }
+
+/* ---------- phone tab bar ---------- */
+.totop { position: fixed; right: 14px; bottom: calc(104px + env(safe-area-inset-bottom, 0px)); z-index: 54; width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--ink); color: var(--bg); font-size: 1.4rem; display: grid; place-items: center; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); padding: 0; }
+.totop.on { opacity: 1; visibility: visible; transform: none; }
+.office-chip { position: fixed; left: 14px; bottom: calc(104px + env(safe-area-inset-bottom, 0px)); z-index: 54; display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
+.office-chip .i { font-size: 1.3rem; }
+@media (min-width: 761px) {
+  .totop { right: 32px; bottom: 108px; }
+  .office-chip { left: 24px; bottom: 24px; }
+}
+@media (max-width: 760px) {
+  body { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
+  nav.dock.tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 2px; align-items: end; padding: 6px max(6px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-left, 0px)); }
+  .tab { position: relative; display: grid; justify-items: center; gap: 0; text-decoration: none; color: var(--muted); padding: 4px 0 2px; min-width: 0; border-radius: 12px; }
+  .tab .ti { width: 40px; height: 34px; display: grid; place-items: center; font-size: 1.65rem; }
+  .tab .ur { font-size: 0.8rem; font-weight: 700; line-height: 1.55; }
+  .tab .en { font-size: 0.62rem; font-weight: 700; line-height: 1.1; }
+  .tab.call { color: #12924B; }
+  .tab.wa { color: #1FA855; }
+  .tab.act { color: var(--ink); }
+  .tab.act:not(.tab-main)::before { content: ""; position: absolute; top: -6px; left: 24%; right: 24%; height: 4px; border-radius: 0 0 4px 4px; background: var(--sun); }
+  .tab-main { color: var(--ink); }
+  .tab-main .ti { width: 58px; height: 58px; margin-top: -30px; border-radius: 50%; background: var(--sun); color: #1B1204; font-size: 1.8rem; box-shadow: 0 5px 0 #C07A06, 0 12px 22px rgba(0, 0, 0, 0.25); border: 4px solid var(--bg); }
+  .tab-main.act .ti { background: var(--sun-deep); color: #fff; }
+}
+@media (max-width: 340px) { .tab .en { display: none; } }
+
+/* ---------- office register ---------- */
+#p4 { position: relative; }
+#confetti2 { top: 50px; }
+.office { background: var(--surface-2); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
+.off-head { display: grid; gap: 8px; margin-bottom: 18px; }
+.off-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem, 4vw, 2.3rem); }
+.off-lead { color: var(--muted); max-width: 70ch; }
+.off-warn { display: flex; gap: 10px; align-items: flex-start; background: color-mix(in srgb, var(--sun) 18%, var(--surface)); border: 1px solid var(--sun); border-radius: 12px; padding: 10px 14px; font-size: 0.92rem; font-weight: 600; max-width: 70ch; }
+.off-warn .i { font-size: 1.3rem; margin-top: 2px; }
+.off-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.stat { font: inherit; font-weight: 700; font-size: 0.9rem; border: 2px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 14px; cursor: pointer; min-height: 40px; }
+.stat b { font-family: var(--font-mono); font-weight: 500; margin-inline-start: 6px; }
+.stat[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--bg); }
+.off-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.off-bar .btn { min-height: 50px; padding: 6px 18px; box-shadow: none; gap: 8px; }
+.off-bar .btn-sun { box-shadow: 0 4px 0 #C07A06; }
+.off-search { flex: 1 1 240px; display: flex; align-items: center; gap: 10px; background: var(--surface); border: 2px solid var(--line); border-radius: 14px; padding: 0 14px; min-height: 50px; min-width: 0; }
+.off-search .i { font-size: 1.3rem; color: var(--muted); }
+.off-search input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--ink); font: inherit; min-height: 46px; outline: none; }
+.off-search:focus-within { border-color: var(--sun); }
+.off-form { background: var(--surface); border: 2px solid var(--sun); border-radius: 20px; padding: 18px; display: grid; gap: 14px; margin-bottom: 14px; }
+.off-form[hidden] { display: none; }
+.off-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.off-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.off-actions .btn { min-height: 50px; box-shadow: none; }
+.off-actions .btn-green { box-shadow: 0 4px 0 var(--green-deep); }
+.off-msg { min-height: 1.4em; font-weight: 700; color: var(--green-deep); margin-bottom: 8px; }
+.off-msg.bad { color: #C62828; }
+.off-list { display: grid; gap: 14px; }
+.oc { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.oc.busy { opacity: 0.65; pointer-events: none; }
+.oc-head { display: flex; flex-wrap: wrap; gap: 10px 14px; justify-content: space-between; align-items: flex-start; }
+.oc-who { display: grid; gap: 2px; min-width: 0; }
+.oc-who strong { font-family: var(--font-display); font-size: 1.2rem; overflow-wrap: anywhere; }
+.oc-meta, .oc-date { color: var(--muted); font-size: 0.88rem; }
+.oc-contact { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.oc-link { font-family: var(--font-mono); font-size: 0.95rem; color: var(--ocean); font-weight: 500; }
+.oc-link.wa { font-family: var(--font-body); font-weight: 700; color: #167C3E; }
+.off-sel { font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 10px; padding: 6px 10px; min-height: 42px; min-width: 0; max-width: 100%; }
+.off-sel[data-status="new"] { border-color: var(--ocean); }
+.off-sel[data-status="documents"], .off-sel[data-status="medical"], .off-sel[data-status="visa"] { border-color: var(--sun-deep); }
+.off-sel[data-status="departed"] { border-color: var(--green); background: color-mix(in srgb, var(--green) 14%, var(--bg)); }
+.off-sel[data-status="closed"] { border-color: var(--muted); opacity: 0.8; }
+.oc-docs, .oc-files, .oc-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chipbtn { font: inherit; font-size: 0.85rem; font-weight: 600; border: 2px solid var(--line); background: var(--bg); color: var(--muted); border-radius: 999px; padding: 4px 12px; cursor: pointer; min-height: 36px; }
+.chipbtn[aria-pressed="true"] { border-color: var(--green); background: color-mix(in srgb, var(--green) 14%, var(--surface)); color: var(--ink); }
+.fwrap { display: inline-flex; align-items: center; gap: 4px; max-width: 100%; }
+.fchip { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 4px 10px 4px 4px; font-size: 0.82rem; font-weight: 600; min-width: 0; max-width: 100%; }
+.fchip img { width: 40px; height: 40px; object-fit: cover; border-radius: 8px; background: var(--surface-2); flex: none; }
+.fchip .i { font-size: 1.6rem; margin-inline: 8px; flex: none; color: var(--ocean); }
+.fchip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 220px; }
+.fdel { font: inherit; font-size: 0.8rem; font-weight: 700; border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 8px; padding: 2px 8px; cursor: pointer; min-height: 32px; }
+.fdel.arm, .odel.arm { background: #C62828; border-color: #C62828; color: #fff; }
+.oc-tools .btn { min-height: 42px; padding: 4px 14px; box-shadow: none; font-size: 0.9rem; gap: 6px; }
+.oc-tools .btn .i { font-size: 1.1rem; }
+.odel { font: inherit; font-weight: 700; font-size: 0.85rem; border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 10px; padding: 4px 12px; cursor: pointer; min-height: 42px; margin-inline-start: auto; }
+.oc textarea { font: inherit; font-size: 0.92rem; color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 10px; padding: 8px 10px; width: 100%; min-width: 0; resize: vertical; min-height: 56px; }
+.off-empty { text-align: center; background: var(--surface); border: 2px dashed var(--line); border-radius: 20px; padding: 28px 18px; display: grid; gap: 6px; justify-items: center; color: var(--muted); }
+.off-empty .i { font-size: 2.6rem; color: var(--ocean); }
+.off-empty[hidden] { display: none; }
+.aform { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; max-width: 460px; margin: 0 auto; }
+.af, .af-check { min-width: 0; }
+.aform .tile .en { overflow-wrap: anywhere; }
+.af { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+.af > label { display: grid; }
+.af > label .ur, .af-q .ur { display: block; font-size: 1.15rem; font-weight: 700; line-height: 1.9; }
+.af > label .en, .af-q .en { display: block; font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+.af-in { display: flex; align-items: center; gap: 10px; background: var(--bg); border: 3px solid var(--line); border-radius: 16px; padding: 0 14px; min-height: 60px; }
+.af-in:focus-within { border-color: var(--sun); box-shadow: 0 0 0 4px color-mix(in srgb, var(--sun) 35%, transparent); }
+.af-in .i { font-size: 1.6rem; color: var(--ocean); flex: none; }
+.af-in input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 1.15rem; min-height: 54px; outline: none; }
+.af-in input.mono { font-family: var(--font-mono); letter-spacing: 0.04em; direction: ltr; text-align: left; }
+.af-in input:disabled { opacity: 0.45; }
+.af.bad .af-in { border-color: #C62828; }
+.af-err { color: #C62828; font-weight: 700; font-size: 0.9rem; }
+.af-err[hidden] { display: none; }
+.af-err .ur { display: block; line-height: 1.9; }
+.af-check { display: flex; gap: 12px; align-items: center; cursor: pointer; min-height: 48px; font-weight: 600; }
+.af-check input { width: 28px; height: 28px; flex: none; accent-color: var(--green); }
+.af-check .ur { display: block; line-height: 1.9; }
+.af-check .en { display: block; font-size: 0.85rem; color: var(--muted); }
+.af-q { margin-bottom: 8px; }
+.af > label .ur, .af-q .ur, .af-check .ur, .af-err .ur { text-align: left; }
+.aform .btn-green { width: 100%; }
+.srv-only { display: none; }
+html.srv .srv-only { display: block; }
+html.srv .static-only { display: none; }
+#p4:not(.sent) .sent-only { display: none; }
+#p4.sent .unsent-only { display: none; }
+.thumbs { display: flex; flex-wrap: wrap; gap: 10px; }
+.thumbs:empty { display: none; }
+.thumb { position: relative; width: 76px; height: 76px; border-radius: 12px; overflow: hidden; border: 2px solid var(--green); background: var(--bg); display: grid; place-items: center; font-weight: 800; font-size: 0.8rem; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb button { position: absolute; top: 2px; right: 2px; width: 28px; height: 28px; border-radius: 50%; border: 0; background: #C62828; color: #fff; font-weight: 800; cursor: pointer; line-height: 1; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.refno { font-family: var(--font-mono); font-size: 1.6rem; letter-spacing: 0.04em; }
+#aErr .btn { margin-top: 8px; }
+
+.attach { margin-bottom: 18px; display: grid; gap: 10px; }
+.attach .q { text-align: center; }
+
+.drawer-nav .dt .ur { text-align: left; justify-self: start; }
+.safe { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 22px 18px; display: grid; gap: 18px; }
+.safe-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 0; counter-reset: sf; }
+.safe-steps li { position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 16px 12px 14px; display: grid; gap: 6px; justify-items: center; text-align: center; counter-increment: sf; }
+.safe-steps li::before { content: counter(sf); position: absolute; top: 8px; inset-inline-start: 10px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.safe-steps .i { font-size: 2.1rem; color: var(--ocean); }
+.safe-steps li:nth-child(3) .i { color: var(--green-deep); }
+.safe-steps .ur { display: block; font-size: 1.02rem; font-weight: 700; line-height: 1.9; }
+.safe-steps .en { display: block; font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+.safe-note { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: center; background: color-mix(in srgb, var(--sun) 18%, var(--surface)); border: 1px solid var(--sun); border-radius: 16px; padding: 12px 14px; text-align: center; }
+.safe-note .i { font-size: 1.6rem; flex: none; }
+.safe-note .ur { display: block; font-weight: 700; line-height: 1.9; }
+.safe-note .en { display: block; font-size: 0.88rem; font-weight: 600; }
+.safe-note a { font-family: var(--font-mono); font-weight: 600; color: var(--ink); }
+.off-proc { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 4px 16px; margin-bottom: 14px; max-width: 80ch; }
+.off-proc summary { cursor: pointer; font-weight: 800; min-height: 46px; display: flex; align-items: center; }
+.off-proc ol { margin: 0 0 12px; padding-inline-start: 22px; display: grid; gap: 6px; font-size: 0.93rem; }
+.off-backup { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-bottom: 14px; font-size: 0.92rem; font-weight: 600; }
+.off-backup .stale { color: #C62828; }
+.off-backup .btn { min-height: 44px; padding: 4px 16px; box-shadow: none; font-size: 0.92rem; gap: 6px; }
+.off-paste { display: grid; gap: 8px; }
+.off-paste textarea { font: inherit; background: var(--bg); color: var(--ink); border: 2px dashed var(--line); border-radius: 10px; padding: 8px 10px; width: 100%; min-width: 0; resize: vertical; }
+.oc-next { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 0.88rem; color: var(--muted); }
+.oc-next b { color: var(--ink); }
+.oc-miss { font-weight: 700; color: #B25E00; }
+.oc-follow { display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 600; }
+.oc-follow input { font: inherit; font-size: 0.9rem; color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 10px; padding: 4px 8px; min-height: 38px; }
+.oc-follow.due input { border-color: #C62828; }
+.oc-warn { color: #C62828; font-weight: 700; font-size: 0.88rem; }
+.oc-hist summary { cursor: pointer; font-size: 0.85rem; color: var(--muted); font-weight: 700; min-height: 32px; display: flex; align-items: center; }
+.oc-hist ul { margin: 0; padding-inline-start: 18px; font-size: 0.84rem; color: var(--muted); display: grid; gap: 2px; }
+
+@media (max-width: 560px) { .off-fields { grid-template-columns: minmax(0, 1fr); } .odel { margin-inline-start: 0; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .qa .qi { animation: bob 3.6s ease-in-out infinite; }
+  .qa:nth-child(2) .qi { animation-delay: -0.9s; } .qa:nth-child(3) .qi { animation-delay: -1.8s; } .qa:nth-child(4) .qi { animation-delay: -2.7s; }
+  .qa { transition: transform 0.2s ease, border-color 0.2s ease; }
+  .qa:hover { transform: translateY(-6px); }
+  .qa:active { transform: scale(0.97); }
+  .qa:hover .qi { animation: wob 0.6s ease; }
+  .verify-btn { animation: ring 2.6s ease-out infinite; }
+  .tab-main .ti { animation: tabpulse 2.4s ease-in-out infinite; }
+  @keyframes tabpulse { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+  .tab:active .ti { transform: scale(0.9); }
+  .oc { animation: pop 0.3s both; }
+  .office-chip { animation: pop 0.4s both; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l1.9-5.4A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.2c2.6.2 4.5 2.1 4.5 4.8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9-9.5A5 5 0 0 1 12 6a5 5 0 0 1 9 5.5C19.5 16.4 12 21 12 21z"/><path d="M12 10v5M9.5 12.5h5"/></symbol>
+    <symbol id="i-stamp" viewBox="0 0 24 24"><path d="M8 21h8M5 17h14v-2a3 3 0 0 0-3-3h-1V7a3 3 0 1 0-6 0v5H8a3 3 0 0 0-3 3z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="i-pass" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/></symbol>
+    <symbol id="i-helmet" viewBox="0 0 24 24"><path d="M5 16a7 7 0 0 1 14 0"/><path d="M3 16h18v2.5H3z"/><path d="M10 9.5V6.5h4v3"/></symbol>
+    <symbol id="i-kaaba" viewBox="0 0 24 24"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/><path d="M4 10.6l8 4 8-4"/></symbol>
+    <symbol id="i-passstar" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m12 8 1.2 2.4 2.6.4-1.9 1.8.5 2.6L12 14l-2.4 1.2.5-2.6-1.9-1.8 2.6-.4z"/></symbol>
+    <symbol id="i-arrowup" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-office" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="M20 12.5 12.5 20a5 5 0 0 1-7-7L14 4.5a3.3 3.3 0 0 1 4.7 4.7L10 18a1.7 1.7 0 0 1-2.4-2.4l7.5-7.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M3.5 10.5 9.5 12M20.5 10.5 14.5 12M12 14.5V21"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-brick" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 10h18M3 15h18M9 5v5M15 10v5M9 15v4"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .3 1.5 1 2 2 2 0-3-1-5 1-8z"/></symbol>
+    <symbol id="i-pot" viewBox="0 0 24 24"><path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><path d="M2 11h20M9 7c0-2 2-2 2-4M14 7c0-2 2-2 2-4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></symbol>
+    <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/></symbol>
+    <symbol id="i-like" viewBox="0 0 24 24"><path d="M7 11v9H3v-9zM7 11l4-8a2 2 0 0 1 2 2v4h6a2 2 0 0 1 2 2l-1.5 7a2 2 0 0 1-2 1.6H7"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+    <symbol id="i-idcard" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16c.8-2 5.2-2 7 0M14 10h4M14 13h3"/></symbol>
+    <symbol id="i-cert" viewBox="0 0 24 24"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.5V16c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10M10 20v-5h4v5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="palm" viewBox="-100 -140 200 300">
+      <path d="M0 0C-5 55-14 105-32 158" fill="none" stroke="#071A33" stroke-width="9" stroke-linecap="round"/>
+      <g fill="#071A33">
+        <path transform="rotate(14)" d="M0 0C20-26 58-28 88-2 58-16 22-12 0 0z"/>
+        <path transform="rotate(-18)" d="M0 0C20-26 58-28 88-2 58-16 22-12 0 0z"/>
+        <path transform="rotate(-52)" d="M0 0C20-26 58-28 88-2 58-16 22-12 0 0z"/>
+        <path transform="rotate(-96)" d="M0 0C20-26 58-28 84-2 58-16 22-12 0 0z"/>
+        <path transform="rotate(-140)" d="M0 0C20-26 58-28 88-2 58-16 22-12 0 0z"/>
+        <path transform="rotate(-172)" d="M0 0C20-26 58-28 88-2 58-16 22-12 0 0z"/>
+        <path transform="rotate(190)" d="M0 0C20-26 58-28 80-2 58-16 22-12 0 0z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header bleed" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="RSA &amp; Gulf Consultant, back to top">
+      <span class="badge" role="img" aria-label="RSA &amp; Gulf Consultant logo"></span>
+      <span class="brand-name">RSA &amp; Gulf Consultant<small lang="ur" dir="rtl">آر ایس اے گلف کنسلٹنٹ</small><small class="lic-mini">Lic # OP &amp; HRD / 3662 / RWP - 2015</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#destinations">Countries</a>
+      <a href="#documents">Documents</a>
+      <a href="#verify">Verify us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-green header-call" href="tel:+923402672999" aria-label="Call +92 340 2672999">
+      <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span class="txt"><span class="ur" lang="ur" dir="rtl">کال کریں</span></span>
+      <span class="num">0340 2672999</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="badge" role="img" aria-label="RSA &amp; Gulf Consultant logo"></span>
+    <span class="dn">RSA &amp; Gulf Consultant<small>Lic # OP &amp; HRD / 3662 / RWP - 2015</small></span>
+    <button class="drawer-x" id="drawerX" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <nav class="drawer-nav" aria-label="Menu links">
+      <a href="#top" style="--c:#0B2A4A"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">ہوم</span><span class="en">Home</span></span></a>
+      <a href="#services" style="--c:var(--c-orange)"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">خدمات</span><span class="en">Services</span></span></a>
+      <a href="#destinations" style="--c:var(--c-blue)"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">ہمارے ممالک</span><span class="en">Countries</span></span></a>
+      <a href="#process" style="--c:var(--c-purple)"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">نوکری کا راستہ</span><span class="en">How it works</span></span></a>
+      <a href="#documents" style="--c:var(--c-teal)"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">کاغذات</span><span class="en">Documents</span></span></a>
+      <a href="#apply" style="--c:var(--c-red)"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">درخواست دیں</span><span class="en">Apply for a job</span></span></a>
+      <a href="#verify" style="--c:var(--c-green)"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">لائسنس چیک کریں</span><span class="en">Verify our licence</span></span></a>
+      <a href="#contact" style="--c:#C13584"><span class="di"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="dt"><span class="ur" lang="ur" dir="rtl">رابطہ</span><span class="en">Contact</span></span></a>
+  </nav>
+  <div class="drawer-cta">
+    <span class="pill" data-hours-pill><span class="dot"></span><span class="pt"><span class="ur" lang="ur" dir="rtl"></span><span class="en">Mon - Fri, 9 AM - 5 PM</span></span></span>
+    <a class="btn btn-green" href="tel:+923402672999"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">ابھی کال کریں</span><span class="en">0340 2672999</span></span></a>
+    <a class="btn btn-wa" href="https://wa.me/923402672999" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">واٹس ایپ</span><span class="en">WhatsApp</span></span></a>
+  </div>
+</aside>
+
+<main id="top">
+  <div class="hero bleed">
+    <div class="rays" aria-hidden="true"></div>
+    <div class="trail" aria-hidden="true"></div>
+    <div class="plane" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M30 2h4l2 20 22 12v5L36 33l-1 15 7 6v4l-10-3-10 3v-4l7-6-1-15L6 39v-5l22-12z"/></svg></div>
+    <div class="stars" aria-hidden="true"><i style="left:43%;top:46px;animation-delay:-1.6s"></i><i style="left:8%;top:26px;animation-delay:-3.3s"></i><i style="left:14%;top:101px;animation-delay:-2.3s"></i><i style="left:66%;top:62px;animation-delay:-0.1s"></i><i style="left:57%;top:115px;animation-delay:-0.3s"></i><i style="left:13%;top:149px;animation-delay:-1.7s"></i><i style="left:74%;top:39px;animation-delay:-3.8s"></i><i style="left:82%;top:168px;animation-delay:-2.3s"></i><i style="left:9%;top:155px;animation-delay:-2.3s"></i><i style="left:8%;top:64px;animation-delay:-0.2s"></i><i style="left:19%;top:82px;animation-delay:-1.7s"></i><i style="left:71%;top:38px;animation-delay:-2.3s"></i><i style="left:73%;top:182px;animation-delay:-0.7s"></i><i style="left:76%;top:154px;animation-delay:-2.6s"></i><i style="left:49%;top:32px;animation-delay:-2.2s"></i><i style="left:10%;top:152px;animation-delay:-0.2s"></i><i style="left:28%;top:135px;animation-delay:-2.7s"></i><i style="left:56%;top:88px;animation-delay:-1.9s"></i><i style="left:60%;top:100px;animation-delay:-1.2s"></i><i style="left:25%;top:186px;animation-delay:-3.1s"></i><i style="left:12%;top:155px;animation-delay:-1.2s"></i><i style="left:65%;top:95px;animation-delay:-2.9s"></i></div>
+    <div class="cloud c1" aria-hidden="true"></div>
+    <div class="cloud c2" aria-hidden="true"></div>
+    <div class="birds" aria-hidden="true">
+      <svg class="bird b1" viewBox="0 0 26 12"><path d="M1 8 Q7 0 13 7 Q19 0 25 8"/></svg>
+      <svg class="bird b2" viewBox="0 0 26 12"><path d="M1 8 Q7 0 13 7 Q19 0 25 8"/></svg>
+      <svg class="bird b3" viewBox="0 0 26 12"><path d="M1 8 Q7 0 13 7 Q19 0 25 8"/></svg>
+    </div>
+    <div class="wrap hero-inner">
+      <div class="licplate" role="group" aria-label="Government licence">
+        <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="sealpath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <circle cx="60" cy="60" r="57" class="s-bg"/>
+          <g class="s-ring"><text><textPath href="#sealpath" textLength="286" lengthAdjust="spacing">GOVT. LICENSED • EMPLOYMENT PROMOTER • </textPath></text></g>
+          <circle cx="60" cy="60" r="31" class="s-in"/>
+          <path class="s-tick" d="M45 61 l11 11 l21 -23"/>
+        </svg>
+        <div class="lic-txt">
+          <span class="lic-label"><span class="ur" lang="ur" dir="rtl">سرکاری لائسنس نمبر</span><span class="en">Government licence no.</span></span>
+          <b class="lic-no">Lic # OP &amp; HRD / 3662 / RWP - 2015</b>
+          <span class="lic-sub">Overseas Employment Promoter</span>
+          <a class="lic-verify" href="https://beoe.gov.pk/list-of-oeps" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span class="ur" lang="ur" dir="rtl">سرکاری سائٹ پر تصدیق کریں</span><span class="en">Verify</span></a>
+        </div>
+      </div>
+      <div class="brandrow">
+        <span class="badge" role="img" aria-label="RSA &amp; Gulf Consultant logo: palm trees over a sunset and sea"></span>
+      <h1 class="brandline" aria-label="RSA &amp; Gulf Consultant">
+        <span class="l1" aria-hidden="true"><span class="wd"><span class="ltr" style="--i:0">R</span><span class="ltr" style="--i:1">S</span><span class="ltr" style="--i:2">A</span></span><span class="wd amp"><span class="ltr" style="--i:2">&amp;</span></span><span class="wd gulf"><span class="ltr" style="--i:3">G</span><span class="ltr" style="--i:4">u</span><span class="ltr" style="--i:5">l</span><span class="ltr" style="--i:6">f</span></span></span>
+        <span class="l2" aria-hidden="true"><span class="ltr" style="--i:7">C</span><span class="ltr" style="--i:8">o</span><span class="ltr" style="--i:9">n</span><span class="ltr" style="--i:10">s</span><span class="ltr" style="--i:11">u</span><span class="ltr" style="--i:12">l</span><span class="ltr" style="--i:13">t</span><span class="ltr" style="--i:14">a</span><span class="ltr" style="--i:15">n</span><span class="ltr" style="--i:16">t</span></span>
+      <svg class="swoosh" viewBox="0 0 240 14" aria-hidden="true"><path d="M3 9 Q 40 1 80 7 T 160 7 T 237 5"/></svg>
+      </h1>
+      </div>
+      <p class="tag"><span class="ur" lang="ur" dir="rtl">خلیج میں نوکری کا قابلِ بھروسہ ساتھی</span><span class="en">Your trusted consultant for Gulf jobs</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-green" href="tel:+923402672999"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">ابھی کال کریں</span><span class="en">Call now</span></span></a>
+        <a class="btn btn-sun" href="#apply"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">نوکری کے لیے درخواست</span><span class="en">Apply for a job</span></span></a>
+      </div>
+      <button class="listen" type="button" hidden data-say="آر ایس اے گلف کنسلٹنٹ۔ خلیج میں نوکری کا قابلِ بھروسہ ساتھی۔ ہم سرکاری لائسنس یافتہ ہیں۔ ابھی کال کریں۔">
+        <svg class="i" aria-hidden="true"><use href="#i-speaker"/></svg><span class="ur" lang="ur" dir="rtl">سنیں</span>
+      </button>
+    </div>
+    <svg class="scene" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="100%" r="60%"><stop offset="0" stop-color="#FFE29A" stop-opacity="0.9"/><stop offset="1" stop-color="#FFE29A" stop-opacity="0"/></radialGradient>
+        <linearGradient id="sunfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD24A"/><stop offset="1" stop-color="#F26A1B"/></linearGradient>
+      </defs>
+      <ellipse class="glow" cx="600" cy="190" rx="360" ry="170" fill="url(#glow)"/>
+      <g class="sun"><circle cx="600" cy="176" r="96" fill="url(#sunfill)"/></g>
+      <g class="palm pl"><use href="#palm" x="395" y="-15" width="150" height="225"/></g>
+      <g class="palm pr"><use href="#palm" x="385" y="-29" width="170" height="255" transform="translate(1200 0) scale(-1 1)"/></g>
+      <g class="wv wv1"><path d="M-280 182 Q-210 170 -140 182 T0 182 T140 182 T280 182 T420 182 T560 182 T700 182 T840 182 T980 182 T1120 182 T1260 182 T1400 182 T1540 182 V260 H-280Z" fill="#2B86D6" opacity="0.8"/></g>
+      <g class="wv wv2"><path d="M-280 206 Q-210 195 -140 206 T0 206 T140 206 T280 206 T420 206 T560 206 T700 206 T840 206 T980 206 T1120 206 T1260 206 T1400 206 T1540 206 V260 H-280Z" fill="#1565C0" opacity="1"/></g>
+      <g class="wv wv3"><path d="M-280 232 Q-210 223 -140 232 T0 232 T140 232 T280 232 T420 232 T560 232 T700 232 T840 232 T980 232 T1120 232 T1260 232 T1400 232 T1540 232 V260 H-280Z" fill="#0B2A4A" opacity="1"/></g>
+    </svg>
+  </div>
+
+  <div class="wrap trust rv">
+    <div style="--n:0"><span class="tkw"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span class="tkb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4 8-9"/></svg></span></span><span class="ur" lang="ur" dir="rtl">سرکاری لائسنس</span><span class="en">Government licence</span></div>
+    <div style="--n:1"><span class="tkw"><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg><span class="tkb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4 8-9"/></svg></span></span><span class="ur" lang="ur" dir="rtl">ورک ویزا اور وزٹ ویزا</span><span class="en">Work &amp; visit visa</span></div>
+    <div style="--n:2"><span class="tkw"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span class="tkb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4 8-9"/></svg></span></span><span class="ur" lang="ur" dir="rtl">چار خلیجی ممالک</span><span class="en">Four Gulf countries</span></div>
+    <div style="--n:3"><span class="tkw"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg><span class="tkb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12.5 4 4 8-9"/></svg></span></span><span class="ur" lang="ur" dir="rtl">شروع سے آخر تک رہنمائی</span><span class="en">Help from start to finish</span></div>
+  </div>
+
+  <div class="wrap quickwrap rv">
+    <p class="qtitle"><span class="ur" lang="ur" dir="rtl">آپ کو کیا چاہیے؟</span><span class="en">What do you need?</span></p>
+    <div class="quick">
+      <a class="qa" href="#apply" style="--c: var(--c-orange)"><span class="qi"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg></span><span class="ur" lang="ur" dir="rtl">نوکری چاہیے</span><span class="en">I need a job</span></a>
+      <a class="qa" href="#services" style="--c: var(--c-blue)"><span class="qi"><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg></span><span class="ur" lang="ur" dir="rtl">ویزا</span><span class="en">Visa help</span></a>
+      <a class="qa" href="#verify" style="--c: var(--c-green)"><span class="qi"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><span class="ur" lang="ur" dir="rtl">لائسنس چیک کریں</span><span class="en">Check our licence</span></a>
+      <a class="qa" href="tel:+923402672999" style="--c: #12924B"><span class="qi"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="ur" lang="ur" dir="rtl">کال کریں</span><span class="en">Call us</span></a>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2><span class="ur" lang="ur" dir="rtl">ہماری خدمات</span><span class="en">Our services</span></h2>
+        <p class="tap"><span class="ur" lang="ur" dir="rtl">کسی پر ٹیپ کریں</span><span class="en">Tap one</span></p>
+      </div>
+      <div class="services" id="svcGrid">
+        <button class="service rv" type="button" aria-pressed="false" data-ur="بیرون ملک روزگار" data-en="Overseas jobs" style="--c: var(--c-orange)">
+          <span class="ico"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg></span>
+          <h3><span class="ur" lang="ur" dir="rtl">بیرون ملک روزگار</span><span class="en">Overseas jobs</span></h3>
+        </button>
+        <button class="service rv" type="button" aria-pressed="false" data-ur="ورک ویزا" data-en="Work visa" style="--c: var(--c-blue)">
+          <span class="ico"><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg></span>
+          <h3><span class="ur" lang="ur" dir="rtl">ورک ویزا</span><span class="en">Work visa</span></h3>
+        </button>
+        <button class="service rv" type="button" aria-pressed="false" data-ur="وزٹ ویزا" data-en="Visit visa" style="--c: var(--c-green)">
+          <span class="ico"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg></span>
+          <h3><span class="ur" lang="ur" dir="rtl">وزٹ ویزا</span><span class="en">Visit visa</span></h3>
+        </button>
+        <button class="service rv" type="button" aria-pressed="false" data-ur="عمرہ ویزا" data-en="Umrah visa" style="--c: var(--c-gold)">
+          <span class="ico"><svg class="i" aria-hidden="true"><use href="#i-kaaba"/></svg></span>
+          <h3><span class="ur" lang="ur" dir="rtl">عمرہ ویزا</span><span class="en">Umrah visa</span></h3>
+        </button>
+        <button class="service rv" type="button" aria-pressed="false" data-ur="کسٹم ویزا" data-en="Custom visa" style="--c: var(--c-red)">
+          <span class="ico"><svg class="i" aria-hidden="true"><use href="#i-passstar"/></svg></span>
+          <h3><span class="ur" lang="ur" dir="rtl">کسٹم ویزا</span><span class="en">Custom visa</span></h3>
+        </button>
+        <button class="service rv" type="button" aria-pressed="false" data-ur="افرادی قوت کی بھرتی" data-en="Recruitment" style="--c: var(--c-purple)">
+          <span class="ico"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <h3><span class="ur" lang="ur" dir="rtl">افرادی قوت کی بھرتی</span><span class="en">Recruitment</span></h3>
+        </button>
+        <button class="service rv" type="button" aria-pressed="false" data-ur="تعمیراتی و تکنیکی عملہ" data-en="Construction & technical" style="--c: var(--c-teal)">
+          <span class="ico"><svg class="i" aria-hidden="true"><use href="#i-tool"/></svg></span>
+          <h3><span class="ur" lang="ur" dir="rtl">تعمیراتی و تکنیکی عملہ</span><span class="en">Construction &amp; technical</span></h3>
+        </button>
+      </div>
+      <div class="svc-action" id="svcAction" hidden>
+        <div class="nm"><span class="ur" id="svcUr" lang="ur" dir="rtl"></span><span class="en" id="svcEn"></span></div>
+        <a class="btn btn-green" href="tel:+923402672999"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">کال کریں</span><span class="en">Call</span></span></a>
+        <a class="btn btn-wa" id="svcWa" href="https://wa.me/923402672999" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">واٹس ایپ</span><span class="en">WhatsApp</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="dest-band bleed" id="destinations">
+    <section>
+      <div class="wrap">
+        <div class="section-head rv">
+          <h2><span class="ur" lang="ur" dir="rtl">ہمارے ممالک</span><span class="en">Our countries</span></h2>
+          <p class="tap"><span class="ur" lang="ur" dir="rtl">اپنا ملک چنیں</span><span class="en">Tap your country</span></p>
+        </div>
+        <div class="mapcard rv">
+          <svg id="routeMap" viewBox="0 0 800 330" role="img" aria-label="Flight routes from Pakistan to Saudi Arabia, UAE, Qatar and Oman">
+            <defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.5" class="dotc"/></pattern></defs>
+            <rect width="800" height="330" fill="url(#dots)"/>
+            <g class="route-g" data-en="Saudi Arabia" style="--c:#0E7A4A" tabindex="0" role="button" aria-label="Saudi Arabia">
+          <path class="rt" d="M717,75 Q440,20 161,242"/>
+          <path class="mp" d="M12 0 L-9 -7 L-4 0 L-9 7Z"><animateMotion dur="7.0s" repeatCount="indefinite" rotate="auto" path="M717,75 Q440,20 161,242"/></path>
+          <circle class="hit" cx="161" cy="242" r="34"/>
+          <circle class="ring" cx="161" cy="242" r="10"/>
+          <circle class="pin" cx="161" cy="242" r="9"/>
+          <text class="pl" x="135" y="280" text-anchor="end">Saudi Arabia</text>
+        </g>
+        <g class="route-g" data-en="Qatar" style="--c:#7B2D4F" tabindex="0" role="button" aria-label="Qatar">
+          <path class="rt" d="M717,75 Q500,45 263,231"/>
+          <path class="mp" d="M12 0 L-9 -7 L-4 0 L-9 7Z"><animateMotion dur="6.0s" repeatCount="indefinite" rotate="auto" path="M717,75 Q500,45 263,231"/></path>
+          <circle class="hit" cx="263" cy="231" r="34"/>
+          <circle class="ring" cx="263" cy="231" r="10"/>
+          <circle class="pin" cx="263" cy="231" r="9"/>
+          <text class="pl" x="263" y="269" text-anchor="middle">Qatar</text>
+        </g>
+        <g class="route-g" data-en="UAE" style="--c:#C0392B" tabindex="0" role="button" aria-label="UAE">
+          <path class="rt" d="M717,75 Q545,75 343,232"/>
+          <path class="mp" d="M12 0 L-9 -7 L-4 0 L-9 7Z"><animateMotion dur="5.5s" repeatCount="indefinite" rotate="auto" path="M717,75 Q545,75 343,232"/></path>
+          <circle class="hit" cx="343" cy="232" r="34"/>
+          <circle class="ring" cx="343" cy="232" r="10"/>
+          <circle class="pin" cx="343" cy="232" r="9"/>
+          <text class="pl" x="343" y="270" text-anchor="middle">UAE</text>
+        </g>
+        <g class="route-g" data-en="Oman" style="--c:#B3262F" tabindex="0" role="button" aria-label="Oman">
+          <path class="rt" d="M717,75 Q600,125 408,262"/>
+          <path class="mp" d="M12 0 L-9 -7 L-4 0 L-9 7Z"><animateMotion dur="5.0s" repeatCount="indefinite" rotate="auto" path="M717,75 Q600,125 408,262"/></path>
+          <circle class="hit" cx="408" cy="262" r="34"/>
+          <circle class="ring" cx="408" cy="262" r="10"/>
+          <circle class="pin" cx="408" cy="262" r="9"/>
+          <text class="pl" x="408" y="300" text-anchor="middle">Oman</text>
+        </g>
+            <g class="origin">
+              <circle class="ring o" cx="717" cy="75" r="14"/>
+              <circle cx="717" cy="75" r="11" class="opin"/>
+              <text class="pl" x="717" y="53" text-anchor="middle">Pakistan</text>
+            </g>
+          </svg>
+        </div>
+        <div class="dests">
+          <button class="dest rv" type="button" aria-pressed="false" data-ur="سعودی عرب" data-en="Saudi Arabia" style="--c: #0E7A4A"><span class="code">KSA</span><span class="ar" lang="ar" dir="rtl">السعودية</span><span class="ur" lang="ur" dir="rtl" style="line-height:1.9;font-weight:700">سعودی عرب</span><span class="en">Saudi Arabia</span></button>
+          <button class="dest rv" type="button" aria-pressed="false" data-ur="متحدہ عرب امارات" data-en="UAE" style="--c: #C0392B"><span class="code">UAE</span><span class="ar" lang="ar" dir="rtl">الإمارات</span><span class="ur" lang="ur" dir="rtl" style="line-height:1.9;font-weight:700">متحدہ عرب امارات</span><span class="en">UAE</span></button>
+          <button class="dest rv" type="button" aria-pressed="false" data-ur="قطر" data-en="Qatar" style="--c: #7B2D4F"><span class="code">QAT</span><span class="ar" lang="ar" dir="rtl">قطر</span><span class="ur" lang="ur" dir="rtl" style="line-height:1.9;font-weight:700">قطر</span><span class="en">Qatar</span></button>
+          <button class="dest rv" type="button" aria-pressed="false" data-ur="عمان" data-en="Oman" style="--c: #B3262F"><span class="code">OMN</span><span class="ar" lang="ar" dir="rtl">عُمان</span><span class="ur" lang="ur" dir="rtl" style="line-height:1.9;font-weight:700">عمان</span><span class="en">Oman</span></button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2><span class="ur" lang="ur" dir="rtl">نوکری تک کا راستہ</span><span class="en">Your path to a job</span></h2>
+        <button class="listen" type="button" hidden data-say="نوکری تک کے چھ مرحلے۔ رابطہ کریں۔ کاغذات دیں۔ انتخاب۔ میڈیکل اور ویزا۔ سرکاری منظوری۔ روانگی۔">
+          <svg class="i" aria-hidden="true"><use href="#i-speaker"/></svg><span class="ur" lang="ur" dir="rtl">سنیں</span>
+        </button>
+      </div>
+      <div class="route" aria-hidden="true"><div class="route-fill" id="routeFill"></div><div class="route-plane" id="routePlane"><svg viewBox="0 0 64 64"><path d="M30 2h4l2 20 22 12v5L36 33l-1 15 7 6v4l-10-3-10 3v-4l7-6-1-15L6 39v-5l22-12z"/></svg></div></div>
+      <ol class="steps" id="steps">
+        <li class="rv" tabindex="0" role="button"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><h3><span class="ur" lang="ur" dir="rtl">رابطہ کریں</span><span class="en">Contact us</span></h3></li>
+        <li class="rv" tabindex="0" role="button"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg><h3><span class="ur" lang="ur" dir="rtl">کاغذات دیں</span><span class="en">Documents</span></h3></li>
+        <li class="rv" tabindex="0" role="button"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg><h3><span class="ur" lang="ur" dir="rtl">انتخاب</span><span class="en">Selection</span></h3></li>
+        <li class="rv" tabindex="0" role="button"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg><h3><span class="ur" lang="ur" dir="rtl">میڈیکل اور ویزا</span><span class="en">Medical &amp; visa</span></h3></li>
+        <li class="rv" tabindex="0" role="button"><svg class="i" aria-hidden="true"><use href="#i-stamp"/></svg><h3><span class="ur" lang="ur" dir="rtl">سرکاری منظوری</span><span class="en">Clearance</span></h3></li>
+        <li class="rv" tabindex="0" role="button"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><h3><span class="ur" lang="ur" dir="rtl">روانگی</span><span class="en">Departure</span></h3></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="documents">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2><span class="ur" lang="ur" dir="rtl">یہ کاغذات تیار رکھیں</span><span class="en">Keep these ready</span></h2>
+        <p class="tap"><span class="ur" lang="ur" dir="rtl">جو آپ کے پاس ہیں ان پر ٹیپ کریں</span><span class="en">Tap what you have</span></p>
+      </div>
+      <div class="docs rv">
+        <div class="tiles" id="docsGrid">
+          <button class="tile" type="button" aria-pressed="false" data-ur="پاسپورٹ" data-en="Passport"><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg><span class="ur" lang="ur" dir="rtl">پاسپورٹ</span><span class="en">Passport</span></button>
+          <button class="tile" type="button" aria-pressed="false" data-ur="شناختی کارڈ" data-en="CNIC"><svg class="i" aria-hidden="true"><use href="#i-idcard"/></svg><span class="ur" lang="ur" dir="rtl">شناختی کارڈ</span><span class="en">CNIC</span></button>
+          <button class="tile" type="button" aria-pressed="false" data-ur="تصاویر" data-en="Photos"><svg class="i" aria-hidden="true"><use href="#i-cam"/></svg><span class="ur" lang="ur" dir="rtl">تصاویر</span><span class="en">Photos</span></button>
+          <button class="tile" type="button" aria-pressed="false" data-ur="سی وی" data-en="CV"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg><span class="ur" lang="ur" dir="rtl">سی وی</span><span class="en">CV</span></button>
+          <button class="tile" type="button" aria-pressed="false" data-ur="تعلیم / ہنر کی سند" data-en="Education or trade certificate"><svg class="i" aria-hidden="true"><use href="#i-cert"/></svg><span class="ur" lang="ur" dir="rtl">تعلیم / ہنر کی سند</span><span class="en">Education or trade certificate</span></button>
+          <button class="tile" type="button" aria-pressed="false" data-ur="تجربے کا خط" data-en="Experience letter"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg><span class="ur" lang="ur" dir="rtl">تجربے کا خط</span><span class="en">Experience letter</span></button>
+        </div>
+        <div class="docs-meter">
+          <div class="dm-top"><span class="dm-count" id="dmCount">0 / 6</span><span class="ur" id="dmMsg" lang="ur" dir="rtl">اپنے کاغذات چنیں</span></div>
+          <div class="dm-bar" aria-hidden="true"><div class="dm-fill" id="dmFill"></div></div>
+          <div class="dm-actions">
+            <a class="btn btn-wa" id="docsWa" href="https://wa.me/923402672999" target="_blank" rel="noopener" hidden><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">فہرست بھیجیں</span><span class="en">Send my list</span></span></a>
+            <a class="btn btn-sun" href="#apply"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">درخواست دیں</span><span class="en">Apply now</span></span></a>
+          </div>
+          <div class="confetti" id="confetti" aria-hidden="true"></div>
+        </div>
+      </div>
+      <p class="fine"><span class="en" style="opacity:1">Usually needed. Our team confirms the list for your job.</span></p>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2><span class="ur" lang="ur" dir="rtl">آپ کا ڈیٹا محفوظ</span><span class="en">Your information is safe</span></h2>
+      </div>
+      <div class="safe rv">
+        <ol class="safe-steps">
+          <li><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><span class="ur" data-srv-ur="آپ فارم اور کاغذات بھیجیں" lang="ur" dir="rtl">آپ واٹس ایپ پر بھیجیں</span><span class="en" data-srv-en="You send the form and documents">You send it on WhatsApp</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-office"/></svg><span class="ur" data-srv-ur="محفوظ سرور پر جمع ہوتا ہے" lang="ur" dir="rtl">ہمارا عملہ دفتر کے ریکارڈ میں لکھتا ہے</span><span class="en" data-srv-en="It is saved on our private server">Our staff save it in the office record</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span class="ur" lang="ur" dir="rtl">صرف مجاز عملہ دیکھ سکتا ہے</span><span class="en">Only authorised staff can open it</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-x"/></svg><span class="ur" lang="ur" dir="rtl">آپ کہیں تو مٹا دیا جائے گا</span><span class="en">Deleted if you ask us</span></li>
+        </ol>
+        <div class="safe-note">
+          <svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>
+          <div><span class="ur" lang="ur" dir="rtl">کاغذات صرف ہمارے سرکاری نمبر پر بھیجیں</span><span class="en">Send documents only to our official number: <a href="https://wa.me/923402672999" target="_blank" rel="noopener">0340 2672999</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="apply-band bleed" id="apply">
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2><span class="ur" lang="ur" dir="rtl">درخواست دیں، ایک آسان فارم</span><span class="en">Apply with one easy form</span></h2>
+        </div>
+        <div class="wizard">
+          <div class="dots" aria-hidden="true"><span id="d1" class="on">1</span><span id="d2">2</span></div>
+
+          <div class="panel" id="pForm">
+            <div class="picked" id="picked" hidden></div>
+            <form class="aform" id="aform" novalidate>
+            <div class="af" data-f="fName">
+              <label for="fName"><span class="ur" lang="ur" dir="rtl">پورا نام</span><span class="en">Full name</span></label>
+              <div class="af-in"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg><input id="fName" name="name" type="text" autocomplete="name" maxlength="60"></div>
+              <p class="af-err" role="alert" hidden><span class="ur" lang="ur" dir="rtl">اپنا پورا نام لکھیں</span><span class="en">Write your full name</span></p>
+            </div>
+            <div class="af" data-f="fCity">
+              <label for="fCity"><span class="ur" lang="ur" dir="rtl">شہر</span><span class="en">City</span></label>
+              <div class="af-in"><svg class="i" aria-hidden="true"><use href="#i-office"/></svg><input id="fCity" name="city" type="text" autocomplete="address-level2" maxlength="40"></div>
+              <p class="af-err" role="alert" hidden><span class="ur" lang="ur" dir="rtl">اپنا شہر لکھیں</span><span class="en">Write your city</span></p>
+            </div>
+            <div class="af" data-f="fAddr">
+              <label for="fAddr"><span class="ur" lang="ur" dir="rtl">پتہ</span><span class="en">Address</span></label>
+              <div class="af-in"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><input id="fAddr" name="address" type="text" autocomplete="street-address" maxlength="120"></div>
+              <p class="af-err" role="alert" hidden><span class="ur" lang="ur" dir="rtl">اپنا پتہ لکھیں</span><span class="en">Write your address</span></p>
+            </div>
+            <div class="af" data-f="fPhone">
+              <label for="fPhone"><span class="ur" lang="ur" dir="rtl">واٹس ایپ نمبر</span><span class="en">WhatsApp number</span></label>
+              <div class="af-in"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><input id="fPhone" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" maxlength="16" placeholder="03XX XXXXXXX" class="mono"></div>
+              <p class="af-err" role="alert" hidden><span class="ur" lang="ur" dir="rtl">پورا واٹس ایپ نمبر لکھیں</span><span class="en">Type your full WhatsApp number</span></p>
+            </div>
+            <div class="af" data-f="fPass">
+              <label for="fPass"><span class="ur" lang="ur" dir="rtl">پاسپورٹ نمبر</span><span class="en">Passport number</span></label>
+              <div class="af-in"><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg><input id="fPass" name="passport" type="text" autocomplete="off" maxlength="9" placeholder="AB1234567" autocapitalize="characters" spellcheck="false" class="mono"></div>
+              <p class="af-err" role="alert" hidden><span class="ur" lang="ur" dir="rtl">پاسپورٹ نمبر لکھیں۔ مثال: AB1234567</span><span class="en">Write the passport number. Example: AB1234567</span></p>
+            </div>
+            <label class="af-check"><input type="checkbox" id="fNoPass"><span><span class="ur" lang="ur" dir="rtl">ابھی پاسپورٹ نہیں ہے</span><span class="en">I do not have a passport yet</span></span></label>
+            <div class="af">
+              <div class="af-q static-only"><span class="ur" lang="ur" dir="rtl">میں یہ کاغذات بھیجوں گا (ٹیپ کریں)</span><span class="en">Documents I will send (tap)</span></div><div class="af-q srv-only"><span class="ur" lang="ur" dir="rtl">اپنے کاغذات کی تصویر لگائیں (ٹیپ کریں)</span><span class="en">Add a photo of each document (tap)</span></div>
+              <div class="tiles" id="aDocs">
+              <button class="tile" type="button" aria-pressed="false" data-ur="پاسپورٹ" data-en="Passport"><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg><span class="ur" lang="ur" dir="rtl">پاسپورٹ</span><span class="en">Passport</span></button>
+              <button class="tile" type="button" aria-pressed="false" data-ur="شناختی کارڈ" data-en="CNIC"><svg class="i" aria-hidden="true"><use href="#i-idcard"/></svg><span class="ur" lang="ur" dir="rtl">شناختی کارڈ</span><span class="en">CNIC</span></button>
+              <button class="tile" type="button" aria-pressed="false" data-ur="تصاویر" data-en="Photos"><svg class="i" aria-hidden="true"><use href="#i-cam"/></svg><span class="ur" lang="ur" dir="rtl">تصاویر</span><span class="en">Photos</span></button>
+              <button class="tile" type="button" aria-pressed="false" data-ur="سی وی" data-en="CV"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg><span class="ur" lang="ur" dir="rtl">سی وی</span><span class="en">CV</span></button>
+              <button class="tile" type="button" aria-pressed="false" data-ur="تعلیم / ہنر کی سند" data-en="Education or trade certificate"><svg class="i" aria-hidden="true"><use href="#i-cert"/></svg><span class="ur" lang="ur" dir="rtl">تعلیم / ہنر کی سند</span><span class="en">Education or trade certificate</span></button>
+              <button class="tile" type="button" aria-pressed="false" data-ur="تجربے کا خط" data-en="Experience letter"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg><span class="ur" lang="ur" dir="rtl">تجربے کا خط</span><span class="en">Experience letter</span></button>
+              </div>
+            </div>
+            <div class="thumbs" id="aThumbs" aria-live="polite"></div>
+            <input class="hp" type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="af-err" id="aErr" role="alert" hidden>
+              <span class="ur" lang="ur" dir="rtl">ارسال نہیں ہو سکا۔ انٹرنیٹ چیک کریں اور دوبارہ کوشش کریں۔</span>
+              <span class="en">Could not send. Check your internet and try again.</span>
+              <span class="en" id="aErrMsg"></span>
+              <button class="btn btn-wa" type="button" id="aFallback"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">واٹس ایپ پر بھیجیں</span><span class="en">Send on WhatsApp instead</span></span></button>
+            </div>
+            <button class="btn btn-green" type="submit" id="toResult"><span class="txt"><span class="ur" lang="ur" dir="rtl">آگے چلیں</span><span class="en">Continue</span></span></button>
+            <p class="fine" style="margin-top:0"><a href="#privacy"><span class="ur" lang="ur" dir="rtl">آپ کا ڈیٹا محفوظ ہے</span><span class="en">Your information is safe</span></a></p>
+            </form>
+          </div>
+
+          <div class="panel" id="p4" hidden>
+            <div class="confetti" id="confetti2" aria-hidden="true"></div>
+            <svg class="okmark" viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="30"/><path d="M24 39 l10 10 l19 -21"/></svg>
+            <div class="q unsent-only"><span class="ur" lang="ur" dir="rtl">آپ کا پیغام تیار ہے</span><span class="en">Your message is ready</span></div><div class="q sent-only"><span class="ur" lang="ur" dir="rtl">آپ کی درخواست مل گئی</span><span class="en">Application received</span></div>
+            <div class="msg-box">
+              <p class="ur" id="msgUr" lang="ur" dir="rtl"></p>
+              <div class="meta" id="msgMeta"></div>
+              <div class="sent-only" style="margin-top:12px"><span class="ur" lang="ur" dir="rtl">آپ کا حوالہ نمبر</span><br><span class="en">Your reference number</span><br><strong class="refno" id="refNo"></strong><p class="ur" lang="ur" dir="rtl" style="font-size:1.05rem;margin-top:8px">ہم جلد آپ سے واٹس ایپ پر رابطہ کریں گے۔</p><p class="small">We will contact you on WhatsApp soon.</p></div>
+            </div>
+            <div class="attach unsent-only">
+              <div class="q"><span class="ur" lang="ur" dir="rtl">اب اپنے کاغذات بھیجیں</span><span class="en">Now send your documents</span></div>
+              <ol class="safe-steps">
+                <li><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><span class="ur" lang="ur" dir="rtl">واٹس ایپ پر پیغام بھیجیں</span><span class="en">Send the message on WhatsApp</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-clip"/></svg><span class="ur" lang="ur" dir="rtl">کلپ والا نشان دبائیں</span><span class="en">Tap the paperclip</span></li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-cam"/></svg><span class="ur" lang="ur" dir="rtl">کاغذات کی صاف تصاویر چنیں</span><span class="en">Choose clear photos of your documents</span></li>
+              </ol>
+            </div>
+            <div class="result-actions">
+              <div class="row">
+                <a class="btn btn-green" id="waSend" href="https://wa.me/923402672999" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">واٹس ایپ پر بھیجیں</span><span class="en">Send on WhatsApp</span></span></a>
+                <a class="btn btn-sun" href="tel:+923402672999"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">کال کریں</span><span class="en">Call us</span></span></a>
+              </div>
+              <button class="mini" type="button" id="copyMsg"><svg class="i" aria-hidden="true" style="vertical-align:-2px"><use href="#i-copy"/></svg> Copy message</button>
+              <button class="btn btn-back" type="button" id="again"><span class="txt"><span class="ur" lang="ur" dir="rtl">دوبارہ شروع کریں</span><span class="en">Start again</span></span></button>
+            </div>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+            <p class="small unsent-only">Nothing is sent until you tap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="band bleed" id="employers">
+    <section>
+      <div class="wrap grid">
+        <div>
+          <h2><span class="ur" lang="ur" dir="rtl">کیا آپ کو خلیج میں کارکن چاہییں؟</span><span class="en">Need workers in the Gulf?</span></h2>
+          <div class="btn-row">
+            <a class="btn btn-green" href="tel:+923402672999"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">کال کریں</span><span class="en">Call us</span></span></a>
+            <a class="btn btn-glass" href="mailto:rsagulfconsultant@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">ای میل کریں</span><span class="en">Email us</span></span></a>
+          </div>
+        </div>
+        <ul>
+          <li><svg class="i" aria-hidden="true"><use href="#i-tool"/></svg><span><span class="ur" lang="ur" dir="rtl">تعمیراتی اور تکنیکی عملہ</span><span class="en">Construction and technical staff</span></span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-pass"/></svg><span><span class="ur" lang="ur" dir="rtl">آپ کے کارکنوں کا ورک ویزا</span><span class="en">Work visa for your hires</span></span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span><span class="ur" lang="ur" dir="rtl">سعودی عرب اور خلیج کے لیے عملہ</span><span class="en">Manpower for the Gulf</span></span></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section id="verify">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2><span class="ur" lang="ur" dir="rtl">ہمارا لائسنس خود چیک کریں</span><span class="en">Check our licence yourself</span></h2>
+        <button class="listen" type="button" hidden style="color:var(--ink)" data-say="پیسے دینے سے پہلے تسلی کریں۔ ایجنٹ کا لائسنس نمبر پوچھیں۔ شرائط اور فیس لکھوا لیں۔ ہر ادائیگی کی رسید لیں۔">
+          <svg class="i" aria-hidden="true"><use href="#i-speaker"/></svg><span class="ur" lang="ur" dir="rtl">سنیں</span>
+        </button>
+      </div>
+      <div class="cert rv">
+        <div class="cert-logo"><span class="badge" role="img" aria-label="RSA &amp; Gulf Consultant logo"></span></div>
+        <dl class="cert-fields">
+          <div><dt>Company</dt><dd>THE PAKGULF Manpower Consultant Pvt. Ltd.</dd></div>
+          <div><dt>Brand</dt><dd>RSA &amp; Gulf Consultant</dd></div>
+          <div><dt>Category</dt><dd>Overseas Employment Promoter</dd></div>
+          <div><dt>Licence no.</dt><dd class="mono">Lic # OP &amp; HRD / 3662 / RWP - 2015</dd></div>
+        </dl>
+        <div class="cert-actions">
+          <a class="btn btn-green verify-btn" href="https://beoe.gov.pk/list-of-oeps" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">سرکاری سائٹ پر تصدیق کریں</span><span class="en">Verify on the government website</span></span></a>
+          <a class="btn btn-line" href="https://beoe.gov.pk/performance-of-oeps" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">کارکردگی کا ریکارڈ دیکھیں</span><span class="en">See the performance record</span></span></a>
+        </div>
+        <ol class="vsteps">
+          <li><span class="ur" lang="ur" dir="rtl">ہرا بٹن دبائیں</span><span class="en">Tap the green button</span></li>
+          <li><span class="ur" lang="ur" dir="rtl">لائسنس نمبر 3662 / RWP تلاش کریں</span><span class="en">Look for licence 3662 / RWP</span></li>
+          <li><span class="ur" lang="ur" dir="rtl">نام اور حالت دیکھیں</span><span class="en">Check the name and status</span></li>
+        </ol>
+        <p class="vnote">These buttons open the official Bureau of Emigration &amp; Overseas Employment (Government of Pakistan) pages in a new tab.</p>
+      </div>
+      <div class="section-head rv" style="margin-top:46px;margin-bottom:24px">
+        <h2><span class="ur" lang="ur" dir="rtl">پیسے دینے سے پہلے تسلی کریں</span><span class="en">Check before you pay anyone</span></h2>
+      </div>
+      <div class="tips">
+        <div class="tip rv"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><h3><span class="ur" lang="ur" dir="rtl">لائسنس چیک کریں</span><span class="en">Verify the licence</span></h3><p><span class="ur" lang="ur" dir="rtl">ایجنٹ کا لائسنس نمبر پوچھیں</span><a href="https://beoe.gov.pk/list-of-oeps" target="_blank" rel="noopener">beoe.gov.pk/list-of-oeps</a></p></div>
+        <div class="tip rv"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg><h3><span class="ur" lang="ur" dir="rtl">لکھوا لیں</span><span class="en">Get it in writing</span></h3><p><span class="ur" lang="ur" dir="rtl">شرائط اور فیس تحریری لیں</span></p></div>
+        <div class="tip rv"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><h3><span class="ur" lang="ur" dir="rtl">رسید لیں</span><span class="en">Keep receipts</span></h3><p><span class="ur" lang="ur" dir="rtl">ہر ادائیگی کی رسید</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head rv">
+        <h2><span class="ur" lang="ur" dir="rtl">ہم سے رابطہ کریں</span><span class="en">Contact us</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="big-num">
+          <span class="ur" lang="ur" dir="rtl" style="font-weight:700">ہمارا موبائل نمبر</span>
+          <span class="num">+92 340 2672999</span>
+          <div class="copy-row"><button class="mini" type="button" data-copy="+92 340 2672999">Copy number</button></div>
+          <a class="btn btn-green" href="tel:+923402672999"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="txt"><span class="ur" lang="ur" dir="rtl">ابھی کال کریں</span><span class="en">Call now</span></span></a>
+        </div>
+<div class="hours rv" id="hours">
+          <div class="hours-top">
+            <span class="hi"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <div class="ht">
+              <span class="ur" lang="ur" dir="rtl" style="font-weight:700;font-size:1.2rem;line-height:1.8">دفتری اوقات</span>
+              <span class="en" style="font-weight:700;opacity:1">Office hours</span>
+            </div>
+            <span class="pill" data-hours-pill><span class="dot"></span><span class="pt"><span class="ur" lang="ur" dir="rtl"></span><span class="en">Mon - Fri, 9 AM - 5 PM</span></span></span>
+          </div>
+          <p class="hours-main"><span class="ur" lang="ur" dir="rtl">پیر سے جمعہ، صبح 9 بجے سے شام 5 بجے تک</span><span class="en">Monday to Friday, 9:00 AM to 5:00 PM (Pakistan time)</span></p>
+          <ul class="week" aria-label="Weekly office days">
+            <li class="wk" data-day="1"><span class="ur" lang="ur" dir="rtl">پیر</span><span class="en">Mon</span><span class="tm">9 - 5</span></li>
+            <li class="wk" data-day="2"><span class="ur" lang="ur" dir="rtl">منگل</span><span class="en">Tue</span><span class="tm">9 - 5</span></li>
+            <li class="wk" data-day="3"><span class="ur" lang="ur" dir="rtl">بدھ</span><span class="en">Wed</span><span class="tm">9 - 5</span></li>
+            <li class="wk" data-day="4"><span class="ur" lang="ur" dir="rtl">جمعرات</span><span class="en">Thu</span><span class="tm">9 - 5</span></li>
+            <li class="wk" data-day="5"><span class="ur" lang="ur" dir="rtl">جمعہ</span><span class="en">Fri</span><span class="tm">9 - 5</span></li>
+            <li class="wk off" data-day="6"><span class="ur" lang="ur" dir="rtl">ہفتہ</span><span class="en">Sat</span><span class="tm">Closed</span></li>
+            <li class="wk off" data-day="0"><span class="ur" lang="ur" dir="rtl">اتوار</span><span class="en">Sun</span><span class="tm">Closed</span></li>
+          </ul>
+          <p class="hours-note" id="hoursNote"><span class="ur" lang="ur" dir="rtl">دفتر بند ہو تو واٹس ایپ پر پیغام بھیجیں، ہم دفتر کھلنے پر جواب دیں گے۔</span><span class="en">Outside office hours, send a WhatsApp message and we will reply when we open.</span></p>
+        </div>
+        <a class="chan" style="--c:#1FA855" href="https://wa.me/923402672999" target="_blank" rel="noopener"><span class="ci"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></span><span class="t"><span class="ur" lang="ur" dir="rtl">واٹس ایپ</span><span class="en">WhatsApp</span></span></a>
+        <a class="chan" style="--c:#D8363A" href="mailto:rsagulfconsultant@gmail.com"><span class="ci"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg></span><span class="t"><span class="ur" lang="ur" dir="rtl">ای میل</span><span class="en">rsagulfconsultant@gmail.com</span></span></a>
+        <a class="chan" style="--c:#1877C9" href="https://www.facebook.com/profile.php?id=61595451087792" target="_blank" rel="noopener"><span class="ci"><svg class="i" aria-hidden="true"><use href="#i-like"/></svg></span><span class="t"><span class="ur" lang="ur" dir="rtl">فیس بک پیج</span><span class="en">Facebook: RSA Gulf Consultant</span></span></a>
+        <a class="chan" style="--c:#C13584" href="https://www.instagram.com/rsagulfconsultant" target="_blank" rel="noopener"><span class="ci"><svg class="i" aria-hidden="true"><use href="#i-cam"/></svg></span><span class="t"><span class="ur" lang="ur" dir="rtl">انسٹاگرام</span><span class="en">Instagram: @rsagulfconsultant</span></span></a>
+      </div>
+      <p class="status" id="status2" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="office" class="office" hidden>
+    <div class="wrap">
+      <div class="off-head">
+        <h2 class="off-title">Office register</h2>
+        <p class="off-lead">Applicants and their documents, saved on the server. Only you and invited editors can see this section.</p>
+        <p class="off-warn"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>This holds personal data. Do not give editor access to anyone who should not see passport or CNIC copies.</span></p>
+      </div>
+      <details class="off-proc">
+        <summary>Data handling process (6 steps)</summary>
+        <ol>
+          <li><b>Record</b>: when a message or call arrives, tap Add applicant. Paste the WhatsApp message to fill the form.</li>
+          <li><b>Identify</b>: check the passport and CNIC against the person. Attach clear scans to the same record.</li>
+          <li><b>Complete</b>: tick each document received. The card shows what is still missing.</li>
+          <li><b>Track</b>: change the status at every stage and set a follow-up date. Each change is written to the history.</li>
+          <li><b>Back up</b>: save a backup file at least once a week and keep it in a safe place.</li>
+          <li><b>Close</b>: when someone is not proceeding, delete the record and its files if they ask, or after the retention period you decide.</li>
+        </ol>
+      </details>
+      <div class="off-backup"><span id="offBackupInfo">Last backup: never</span><button id="offBackup" class="btn btn-line" type="button"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Backup all data</button></div>
+      <div class="off-stats" id="offStats" role="group" aria-label="Filter by status"></div>
+      <div class="off-bar">
+        <label class="off-search"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><input id="offSearch" type="search" placeholder="Search name, phone, trade, country" autocomplete="off" aria-label="Search applicants"></label>
+        <button id="offAdd" class="btn btn-sun" type="button"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>Add applicant</button>
+        <button id="offCsv" class="btn btn-line" type="button"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Export CSV</button>
+      </div>
+      <form id="offForm" class="off-form" hidden novalidate>
+        <div class="off-fields">
+          <div class="field"><label for="offName">Name</label><input id="offName" type="text" autocomplete="off" maxlength="80"></div>
+          <div class="field"><label for="offPhone">Phone / WhatsApp</label><input id="offPhone" type="tel" inputmode="tel" autocomplete="off" maxlength="20" placeholder="03XX XXXXXXX"></div>
+          <div class="field"><label for="offCity">City</label><input id="offCity" type="text" autocomplete="off" maxlength="40"></div>
+          <div class="field"><label for="offPassport">Passport no.</label><input id="offPassport" type="text" autocomplete="off" maxlength="12"></div>
+          <div class="field full"><label for="offAddress">Address</label><input id="offAddress" type="text" autocomplete="off" maxlength="120"></div>
+          <div class="field"><label for="offTrade">Trade</label><input id="offTrade" type="text" list="offTrades" autocomplete="off" maxlength="60">
+            <datalist id="offTrades"><option value="Driver"><option value="Electrician"><option value="Mason"><option value="Plumber"><option value="Welder"><option value="Labour"><option value="Cook"><option value="Security guard"></datalist></div>
+          <div class="field"><label for="offCountry">Country</label><select id="offCountry"><option>Saudi Arabia</option><option>UAE</option><option>Qatar</option><option>Oman</option><option>Any Gulf country</option></select></div>
+          <div class="field"><label for="offSource">How they contacted us</label><select id="offSource"><option>WhatsApp</option><option>Phone call</option><option>Walk-in</option><option>Facebook</option><option>Referral</option></select></div>
+          <div class="field"><label for="offFollow">Follow-up date</label><input id="offFollow" type="date"></div>
+          <div class="field full off-paste"><label for="offPaste">Paste the WhatsApp message (optional)</label><textarea id="offPaste" rows="2" placeholder="Paste the message the applicant sent"></textarea><button id="offParse" class="btn btn-line" type="button">Fill the form from the message</button></div>
+          <div class="field full"><label for="offNote">Note</label><textarea id="offNote" rows="2" maxlength="500"></textarea></div>
+        </div>
+        <div class="off-actions">
+          <button class="btn btn-green" type="submit" id="offSave">Save applicant</button>
+          <button class="btn btn-back" type="button" id="offCancel">Cancel</button>
+        </div>
+      </form>
+      <p id="offMsg" class="off-msg" role="status" aria-live="polite"></p>
+      <p id="offNoFiles" class="off-msg" hidden>File uploads are not available in this view.</p>
+      <div id="offList" class="off-list"></div>
+      <div id="offEmpty" class="off-empty" hidden>
+        <svg class="i" aria-hidden="true"><use href="#i-office"/></svg>
+        <p><b>No applicants yet.</b></p>
+        <p>When someone sends their details on WhatsApp or calls, tap <b>Add applicant</b>, then attach their passport, CNIC and other documents to the same record.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bleed">
+  <div class="wrap foot">
+    <span class="badge" role="img" aria-label="RSA &amp; Gulf Consultant logo"></span>
+    <div><b>RSA &amp; Gulf Consultant Pvt. Ltd.</b><span class="sm">THE PAKGULF Manpower Consultant Pvt. Ltd.</span></div>
+    <p class="lic">Overseas Employment Promoter<br>Lic # OP &amp; HRD / 3662 / RWP - 2015</p>
+    <p class="sm foot-hours">Office hours: Monday to Friday, 9:00 AM to 5:00 PM</p>
+    <ul class="foot-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#apply">Apply</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="sm">© 2026 RSA &amp; Gulf Consultant Pvt. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<nav class="dock tabs" aria-label="Quick menu">
+  <a class="tab" href="#top" data-t="top"><span class="ti"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg></span><span class="ur" lang="ur" dir="rtl">ہوم</span><span class="en">Home</span></a>
+  <a class="tab" href="#services" data-t="services"><span class="ti"><svg class="i" aria-hidden="true"><use href="#i-brief"/></svg></span><span class="ur" lang="ur" dir="rtl">خدمات</span><span class="en">Services</span></a>
+  <a class="tab tab-main" href="#apply" data-t="apply"><span class="ti"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg></span><span class="ur" lang="ur" dir="rtl">درخواست</span><span class="en">Apply</span></a>
+  <a class="tab call" href="tel:+923402672999"><span class="ti"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="ur" lang="ur" dir="rtl">کال</span><span class="en">Call</span></a>
+  <a class="tab wa" href="https://wa.me/923402672999" target="_blank" rel="noopener"><span class="ti"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></span><span class="ur" lang="ur" dir="rtl">واٹس ایپ</span><span class="en">WhatsApp</span></a>
+</nav>
+
+<button class="totop" id="toTop" type="button" aria-label="Back to top"><svg class="i" aria-hidden="true"><use href="#i-arrowup"/></svg></button>
+<a class="office-chip" id="officeChip" href="#office" hidden><svg class="i" aria-hidden="true"><use href="#i-office"/></svg><span>Office</span></a>
+
+<div class="fab" id="fab">
+  <div class="fab-menu" id="fabMenu">
+    <a class="fab-item" href="tel:+923402672999" style="--c:#12924B"><span class="fl">Call</span><span class="fc"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+    <a class="fab-item" href="https://wa.me/923402672999" target="_blank" rel="noopener" style="--c:#1FA855"><span class="fl">WhatsApp</span><span class="fc"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></span></a>
+    <a class="fab-item" href="mailto:rsagulfconsultant@gmail.com" style="--c:#D8363A"><span class="fl">Email</span><span class="fc"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg></span></a>
+  </div>
+  <button class="fab-main" id="fabBtn" type="button" aria-expanded="false" aria-controls="fabMenu" aria-label="Quick contact"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var all = function (sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); };
+  var NUM = '923402672999';
+  var root = document.documentElement; root.classList.add('js');
+  var reduce = false; try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+  /* ---- slide-in on scroll (content stays visible; only the slide is delayed) ---- */
+  var rvs = all('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    rvs.forEach(function (el) {
+      var d = Array.prototype.indexOf.call(el.parentNode.children, el) * 70;
+      el.style.transitionDelay = d + 'ms';
+      setTimeout(function () { el.style.transitionDelay = ''; }, d + 1000);
+      io.observe(el);
+    });
+  } else { rvs.forEach(function (el) { el.classList.add('in'); }); }
+
+  /* ---- toast ---- */
+  var toastT;
+  function toast(html) {
+    var t = $('toast'); t.innerHTML = html; t.classList.add('on');
+    clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove('on'); }, 2600);
+  }
+  function scrollTo(id) { var el = $(id); if (el) { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); } }
+
+  /* ---- apply wizard ---- */
+  var state = { country: null, copyText: '' };
+  var SRV = false, picked = [];
+  var panels = [$('pForm'), $('p4')];
+  function show(n) {
+    panels.forEach(function (p, i) { p.hidden = (i !== n - 1); });
+    [1, 2].forEach(function (k) {
+      var d = $('d' + k);
+      d.className = (k === n) ? 'on' : (k < n ? 'done' : '');
+      d.textContent = (k < n) ? '✓' : String(k);
+    });
+  }
+  function setCountry(c) {
+    state.country = c;
+    all('.dest').forEach(function (b) { b.setAttribute('aria-pressed', c && b.getAttribute('data-en') === c.en ? 'true' : 'false'); });
+    all('.route-g').forEach(function (g) { g.classList.toggle('on', !!c && g.getAttribute('data-en') === c.en); });
+    var p = $('picked');
+    if (c) { p.hidden = false; p.innerHTML = '✓ <span class="ur" lang="ur" dir="rtl">' + c.ur + '</span> · ' + c.en; } else { p.hidden = true; p.innerHTML = ''; }
+  }
+  var KINDS = ['passport', 'cnic', 'photos', 'cv', 'certificate', 'experience'];
+  all('#aDocs .tile').forEach(function (b, i) {
+    b.setAttribute('data-kind', KINDS[i] || 'other');
+    b.addEventListener('click', function () {
+      if (SRV) { pickFiles(b.getAttribute('data-kind')); return; }
+      b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    });
+  });
+
+  /* ---- server mode: only switches on when the site is served by the RSA server ---- */
+  function enableServer() {
+    SRV = true; document.documentElement.classList.add('srv');
+    all('[data-srv-ur]').forEach(function (e) { e.textContent = e.getAttribute('data-srv-ur'); });
+    all('[data-srv-en]').forEach(function (e) { e.textContent = e.getAttribute('data-srv-en'); });
+  }
+  try { fetch('/api/health', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { if (j && j.app === 'rsa-gulf') { enableServer(); } }).catch(function () {}); } catch (e) {}
+  function showErr(t) { var e = $('aErr'); $('aErrMsg').textContent = t || ''; e.hidden = false; }
+  function pickFiles(kind) {
+    var inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*,.pdf,application/pdf'; inp.multiple = true;
+    inp.addEventListener('change', function () { addPicked(kind, Array.prototype.slice.call(inp.files || [])); });
+    inp.click();
+  }
+  function shrink(file) {
+    return new Promise(function (resolve) {
+      if (!/^image\//.test(file.type)) { return resolve(file); }
+      var img = new Image(), url = URL.createObjectURL(file);
+      img.onload = function () {
+        var k = Math.min(1, 1800 / Math.max(img.width, img.height)), c = document.createElement('canvas');
+        c.width = Math.max(1, Math.round(img.width * k)); c.height = Math.max(1, Math.round(img.height * k));
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        c.toBlob(function (b) { URL.revokeObjectURL(url); resolve(b || file); }, 'image/jpeg', 0.85);
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); resolve(file); };
+      img.src = url;
+    });
+  }
+  async function addPicked(kind, list) {
+    $('aErr').hidden = true;
+    for (var i = 0; i < list.length; i++) {
+      if (picked.length >= 8) { showErr('You can add up to 8 files.'); break; }
+      var f = list[i], blob = await shrink(f);
+      if (blob.size > 5.5 * 1024 * 1024) { showErr('"' + f.name + '" is too large. Use a smaller photo.'); continue; }
+      var isImg = /^image\//.test(blob.type);
+      picked.push({ kind: kind, name: (f.name || 'photo').replace(/\.[^.]+$/, '') + (isImg ? '.jpg' : '.pdf'), blob: blob, url: isImg ? URL.createObjectURL(blob) : '' });
+    }
+    drawThumbs();
+  }
+  function drawThumbs() {
+    var box = $('aThumbs'); box.textContent = '';
+    picked.forEach(function (p, i) {
+      var d = document.createElement('div'); d.className = 'thumb';
+      if (p.url) { var im = document.createElement('img'); im.src = p.url; im.alt = ''; d.appendChild(im); } else { d.textContent = 'PDF'; }
+      var x = document.createElement('button'); x.type = 'button'; x.textContent = '×'; x.setAttribute('aria-label', 'Remove');
+      x.addEventListener('click', function () { if (p.url) { URL.revokeObjectURL(p.url); } picked.splice(i, 1); drawThumbs(); });
+      d.appendChild(x); box.appendChild(d);
+    });
+    all('#aDocs .tile').forEach(function (b) { b.setAttribute('aria-pressed', picked.some(function (p) { return p.kind === b.getAttribute('data-kind'); }) ? 'true' : 'false'); });
+  }
+  function b64(blob) { return new Promise(function (res, rej) { var r = new FileReader(); r.onload = function () { res(String(r.result).split(',')[1] || ''); }; r.onerror = function () { rej(new Error('read')); }; r.readAsDataURL(blob); }); }
+  async function submitToServer(v, noPass) {
+    var btn = $('toResult'), keep = btn.innerHTML;
+    $('aErr').hidden = true; btn.disabled = true;
+    btn.innerHTML = '<span class="txt"><span class="ur" lang="ur" dir="rtl">بھیجا جا رہا ہے…</span><span class="en">Sending…</span></span>';
+    try {
+      var files = [];
+      for (var i = 0; i < picked.length; i++) { files.push({ kind: picked[i].kind, name: picked[i].name, data: await b64(picked[i].blob) }); }
+      var kinds = {}; picked.forEach(function (p) { kinds[p.kind] = 1; });
+      var docs = all('#aDocs .tile').filter(function (b) { return kinds[b.getAttribute('data-kind')]; }).map(function (b) { return b.getAttribute('data-en'); });
+      var r = await fetch('/api/apply', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: v.name, city: v.city, address: v.address, whatsapp: v.phone, passport: v.pass, noPassport: noPass, country: state.country ? state.country.en : '', docs: docs, files: files, website: $('fWebsite').value }) });
+      var j = null; try { j = await r.json(); } catch (e) {}
+      if (!r.ok || !j || !j.ok) { throw new Error((j && j.error) || ''); }
+      state.ref = j.ref; $('refNo').textContent = j.ref; $('p4').classList.add('sent');
+      build(); show(2); burst('confetti2'); setTimeout(function () { scrollTo('apply'); }, 60);
+    } catch (e) { showErr(e && e.message && e.message !== 'Failed to fetch' ? e.message : ''); }
+    finally { btn.disabled = false; btn.innerHTML = keep; }
+  }
+  $('aFallback').addEventListener('click', function () { $('aErr').hidden = true; $('p4').classList.remove('sent'); state.ref = ''; build(); show(2); });
+  function clean(v, n) { return String(v || '').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n); }
+  function setBad(id, bad) {
+    var box = document.querySelector('.af[data-f="' + id + '"]'); if (!box) { return; }
+    box.classList.toggle('bad', bad); box.querySelector('.af-err').hidden = !bad;
+  }
+  ['fName', 'fCity', 'fAddr', 'fPhone', 'fPass'].forEach(function (id) { $(id).addEventListener('input', function () { setBad(id, false); }); });
+  $('fPass').addEventListener('input', function () { this.value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, ''); });
+  $('fNoPass').addEventListener('change', function () { var on = this.checked; $('fPass').disabled = on; if (on) { $('fPass').value = ''; setBad('fPass', false); } });
+  $('aform').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = { name: clean($('fName').value, 60), city: clean($('fCity').value, 40), address: clean($('fAddr').value, 120), phone: $('fPhone').value.replace(/[^\d+]/g, ''), pass: $('fPass').value.replace(/[^A-Za-z0-9]/g, '').toUpperCase() };
+    var noPass = $('fNoPass').checked;
+    var bad = [];
+    if (v.name.length < 3) { bad.push('fName'); }
+    if (v.city.length < 2) { bad.push('fCity'); }
+    if (v.address.length < 5) { bad.push('fAddr'); }
+    if (v.phone.replace(/\D/g, '').length < 10) { bad.push('fPhone'); }
+    if (!noPass && !/^[A-Z0-9]{7,9}$/.test(v.pass)) { bad.push('fPass'); }
+    ['fName', 'fCity', 'fAddr', 'fPhone', 'fPass'].forEach(function (id) { setBad(id, bad.indexOf(id) >= 0); });
+    if (bad.length) { $(bad[0]).focus(); var bx = $(bad[0]).closest('.af'); if (bx) { bx.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); } return; }
+    state.v = v; state.noPass = noPass;
+    state.docs = all('#aDocs .tile').filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; }).map(function (b) { return { ur: b.getAttribute('data-ur'), en: b.getAttribute('data-en') }; });
+    if (SRV) { submitToServer(v, noPass); return; }
+    build(); show(2); burst('confetti2');
+    var pe = $('p4'); if (pe && pe.scrollIntoView) { setTimeout(function () { scrollTo('apply'); }, 60); }
+  });
+  function build() {
+    var v = state.v, c = state.country;
+    var ur = 'السلام علیکم! میں نوکری کے لیے درخواست دے رہا ہوں۔';
+    var lines = [
+      state.ref ? 'Assalam o Alaikum! I applied on your website. Reference / حوالہ نمبر: ' + state.ref : 'Assalam o Alaikum! I want to apply for a job abroad. / ' + ur,
+      'Name / نام: ' + v.name,
+      'City / شہر: ' + v.city,
+      'Address / پتہ: ' + v.address,
+      'WhatsApp: ' + v.phone,
+      'Passport No / پاسپورٹ نمبر: ' + (state.noPass ? 'Not yet / ابھی نہیں' : v.pass)
+    ];
+    if (c) { lines.push('Country / ملک: ' + c.en); }
+    if (state.docs.length) { lines.push('Documents / کاغذات: ' + state.docs.map(function (d) { return d.en; }).join(', ')); }
+    if (!state.ref) { lines.push('I am sending photos of my documents now. / میں کاغذات کی تصاویر ابھی بھیج رہا ہوں۔'); }
+    var text = lines.join('\n');
+    $('msgUr').textContent = ur;
+    var meta = $('msgMeta'); meta.innerHTML = '';
+    [v.name, v.city, v.phone, state.noPass ? 'No passport yet' : v.pass].concat(c ? [c.en] : []).forEach(function (x) { var s = document.createElement('span'); s.textContent = x; meta.appendChild(s); });
+    $('waSend').href = 'https://wa.me/' + NUM + '?text=' + encodeURIComponent(text);
+    state.copyText = text;
+  }
+  function resetAll() {
+    state = { country: null, copyText: '' };
+    picked.forEach(function (p) { if (p.url) { URL.revokeObjectURL(p.url); } }); picked = []; drawThumbs(); $('p4').classList.remove('sent'); $('aErr').hidden = true;
+    $('aform').reset();
+    all('#aDocs .tile').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+    ['fName', 'fCity', 'fAddr', 'fPhone', 'fPass'].forEach(function (id) { setBad(id, false); });
+    $('fPass').disabled = false;
+    setCountry(null);
+    show(1);
+  }
+  $('again').addEventListener('click', resetAll);
+
+  /* ---- countries: tap to start an application for that country ---- */
+  all('.dest').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!$('p4').hidden) { resetAll(); }
+      var c = { ur: b.getAttribute('data-ur'), en: b.getAttribute('data-en') };
+      setCountry(c);
+      show(1);
+      toast('✓ <span class="ur" lang="ur" dir="rtl">' + c.ur + '</span> · ' + c.en);
+      setTimeout(function () { scrollTo('apply'); }, 450);
+    });
+  });
+
+  /* ---- route map: tap a country on the map ---- */
+  all('.route-g').forEach(function (g) {
+    function go() {
+      var en = g.getAttribute('data-en');
+      var tile = all('.dest').filter(function (d) { return d.getAttribute('data-en') === en; })[0];
+      if (tile) { tile.click(); }
+    }
+    g.addEventListener('click', go);
+    g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+
+  /* ---- services: tap to ask about one ---- */
+  var svcBtns = all('#svcGrid .service');
+  svcBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      svcBtns.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      var ur = b.getAttribute('data-ur'), en = b.getAttribute('data-en');
+      $('svcUr').textContent = ur; $('svcEn').textContent = en;
+      var msg = 'السلام علیکم! مجھے «' + ur + '» کے بارے میں معلومات چاہییں۔\nAssalam o Alaikum! I would like information about: ' + en + '.';
+      $('svcWa').href = 'https://wa.me/' + NUM + '?text=' + encodeURIComponent(msg);
+      var a = $('svcAction'); a.hidden = false;
+      a.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+    });
+  });
+
+  /* ---- process: the plane flies along the route ---- */
+  var steps = all('#steps li'), cur = -1, timer = null;
+  function setStep(i) {
+    cur = i;
+    steps.forEach(function (li, k) { li.classList.toggle('active', k === i); li.classList.toggle('done', k < i); });
+    var pct = ((i + 1) / steps.length * 100) + '%';
+    $('routeFill').style.width = pct; $('routePlane').style.left = pct;
+  }
+  function play() {
+    if (reduce || timer) { return; }
+    timer = setInterval(function () { setStep((cur + 1) % steps.length); }, 2300);
+  }
+  function stop() { clearInterval(timer); timer = null; }
+  if (reduce) { steps.forEach(function (li) { li.classList.add('done'); }); $('routeFill').style.width = '100%'; $('routePlane').style.left = '100%'; }
+  else { setStep(0); }
+  steps.forEach(function (li, k) {
+    function go() { stop(); setStep(k); }
+    li.addEventListener('click', go);
+    li.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+  if ('IntersectionObserver' in window && !reduce) {
+    new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { if (cur < 0) { setStep(0); } play(); } else { stop(); } }); }, { threshold: 0.25 }).observe($('steps'));
+  }
+
+  /* ---- header: shrinks on scroll, shows reading progress, highlights the current section ---- */
+  var hdr = $('siteHeader'), prog = $('progress'), tick = false;
+  function onScroll() {
+    tick = false;
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    hdr.classList.toggle('compact', y > 60);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? Math.min(100, y / h * 100) : 0) + '%';
+  }
+  window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  var navLinks = all('.main-nav a');
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) {
+          navLinks.forEach(function (a) { a.classList.toggle('act', a.getAttribute('href') === '#' + e.target.id); });
+        }
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    ['services', 'destinations', 'documents', 'verify', 'contact'].forEach(function (id) { var s = $(id); if (s) { spy.observe(s); } });
+  }
+
+  /* ---- documents checklist ---- */
+  var docBtns = all('#docsGrid .tile'), KEY = 'rsa-docs';
+  function docMsg(n) {
+    if (n === 0) { return 'اپنے کاغذات چنیں'; }
+    if (n === docBtns.length) { return 'سب تیار ہیں! ✓'; }
+    return n + ' تیار، ' + (docBtns.length - n) + ' باقی';
+  }
+  function burst(cid) {
+    if (reduce) { return; }
+    var box = $(cid || 'confetti'); if (!box) { return; }
+    var cols = ['#F5A31A', '#12924B', '#1C6FD1', '#D8363A', '#7A4CC2'];
+    for (var i = 0; i < 26; i++) {
+      var s = document.createElement('i');
+      s.style.background = cols[i % cols.length];
+      s.style.setProperty('--x', (Math.random() * 360 - 180) + 'px');
+      s.style.setProperty('--y', (Math.random() * -150 - 30) + 'px');
+      s.style.setProperty('--r', (Math.random() * 720 - 360) + 'deg');
+      box.appendChild(s);
+    }
+    setTimeout(function () { box.innerHTML = ''; }, 1500);
+  }
+  var wasAll = false;
+  function renderDocs(save) {
+    var on = docBtns.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; });
+    var n = on.length;
+    $('dmCount').textContent = n + ' / ' + docBtns.length;
+    $('dmFill').style.width = (n / docBtns.length * 100) + '%';
+    $('dmMsg').textContent = docMsg(n);
+    var wa = $('docsWa'); wa.hidden = (n === 0);
+    if (n) {
+      var ur = 'السلام علیکم! میرے پاس یہ کاغذات تیار ہیں: ' + on.map(function (b) { return b.getAttribute('data-ur'); }).join('، ');
+      var en = 'Assalam o Alaikum! I have these documents ready: ' + on.map(function (b) { return b.getAttribute('data-en'); }).join(', ') + '.';
+      wa.href = 'https://wa.me/' + NUM + '?text=' + encodeURIComponent(ur + '\n' + en);
+    }
+    var full = (n === docBtns.length);
+    if (full && !wasAll) { burst(); }
+    wasAll = full;
+    if (save) {
+      try { localStorage.setItem(KEY, JSON.stringify(docBtns.map(function (b) { return b.getAttribute('aria-pressed') === 'true' ? 1 : 0; }))); } catch (e) {}
+    }
+  }
+  try {
+    var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (saved && saved.length === docBtns.length) { docBtns.forEach(function (b, i) { b.setAttribute('aria-pressed', saved[i] ? 'true' : 'false'); }); }
+  } catch (e) {}
+  docBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      renderDocs(true);
+    });
+  });
+  renderDocs(false);
+
+  /* ---- quick contact button (desktop) ---- */
+  var fab = $('fab'), fabBtn = $('fabBtn');
+  if (fab && fabBtn) {
+    function fabSet(open) { fab.classList.toggle('open', open); fabBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    fabBtn.addEventListener('click', function (e) { e.stopPropagation(); fabSet(!fab.classList.contains('open')); });
+    document.addEventListener('click', function (e) { if (!fab.contains(e.target)) { fabSet(false); } });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { fabSet(false); } });
+  }
+
+  /* ---- hamburger menu ---- */
+  var menuBtn = $('menuBtn'), drawer = $('drawer'), scrim = $('scrim'), drawerX = $('drawerX');
+  function menuOpen() { return root.classList.contains('menu-open'); }
+  function setMenu(open) {
+    root.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (open) { setTimeout(function () { drawerX.focus(); }, 60); } else { menuBtn.focus({ preventScroll: true }); }
+  }
+  menuBtn.addEventListener('click', function () { setMenu(!menuOpen()); });
+  drawerX.addEventListener('click', function () { setMenu(false); });
+  scrim.addEventListener('click', function () { setMenu(false); });
+  all('#drawer a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      root.classList.remove('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Open menu');
+      drawer.setAttribute('aria-hidden', 'true');
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!menuOpen()) { return; }
+    if (e.key === 'Escape') { setMenu(false); return; }
+    if (e.key === 'Tab') {
+      var f = all('#drawer a, #drawer button');
+      if (!f.length) { return; }
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+  window.addEventListener('resize', function () { if (menuOpen() && window.innerWidth > 1020) { setMenu(false); } });
+
+  /* ---- office hours: live Open / Closed in Pakistan time (UTC+5, no daylight saving) ---- */
+  var DAYS_UR = ['اتوار', 'پیر', 'منگل', 'بدھ', 'جمعرات', 'جمعہ', 'ہفتہ'];
+  var DAYS_EN = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  function pkNow() { return new Date(Date.now() + 5 * 3600 * 1000); }
+  function hoursState() {
+    var n = pkNow(), d = n.getUTCDay(), m = n.getUTCHours() * 60 + n.getUTCMinutes();
+    var weekday = d >= 1 && d <= 5;
+    var open = weekday && m >= 540 && m < 1020;
+    var nd = null;
+    if (!open) {
+      if (weekday && m < 540) { nd = d; }
+      else { nd = d; do { nd = (nd + 1) % 7; } while (nd < 1 || nd > 5); }
+    }
+    return { day: d, open: open, nextDay: nd, sameDay: (!open && nd === d) };
+  }
+  function renderHours() {
+    var s = hoursState();
+    all('[data-hours-pill]').forEach(function (p) {
+      var ur = p.querySelector('.ur'), en = p.querySelector('.en');
+      p.classList.toggle('open', s.open); p.classList.toggle('closed', !s.open);
+      if (s.open) {
+        ur.textContent = 'دفتر کھلا ہے · شام 5 بجے تک'; en.textContent = 'Open now, until 5:00 PM';
+      } else if (s.sameDay) {
+        ur.textContent = 'دفتر بند ہے · صبح 9 بجے کھلے گا'; en.textContent = 'Closed now, opens today at 9:00 AM';
+      } else {
+        ur.textContent = 'دفتر بند ہے · ' + DAYS_UR[s.nextDay] + ' صبح 9 بجے کھلے گا';
+        en.textContent = 'Closed now, opens ' + DAYS_EN[s.nextDay] + ' at 9:00 AM';
+      }
+    });
+    all('.wk').forEach(function (li) { li.classList.toggle('today', parseInt(li.getAttribute('data-day'), 10) === s.day); });
+    var note = $('hoursNote'); if (note) { note.hidden = s.open; }
+  }
+  renderHours();
+  setInterval(renderHours, 60000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) { renderHours(); } });
+
+  /* ---- copy ---- */
+  function say(el, tx) { el.textContent = tx; setTimeout(function () { if (el.textContent === tx) { el.textContent = ''; } }, 3200); }
+  function copy(text, el) {
+    function fallback() {
+      try {
+        var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select(); var ok = document.execCommand('copy'); document.body.removeChild(ta);
+        say(el, ok ? 'Copied ✓' : 'Select the text and copy it.');
+      } catch (e) { say(el, 'Select the text and copy it.'); }
+    }
+    try { navigator.clipboard.writeText(text).then(function () { say(el, 'Copied ✓'); }, fallback); } catch (e) { fallback(); }
+  }
+  $('copyMsg').addEventListener('click', function () { copy(state.copyText || '', $('status')); });
+  all('[data-copy]').forEach(function (b) { b.addEventListener('click', function () { copy(b.getAttribute('data-copy'), $(b.getAttribute('data-status') || 'status2')); }); });
+
+  /* ---- read-aloud buttons appear only when the device has an Urdu voice ---- */
+  var listens = all('.listen');
+  function urduVoice() {
+    try {
+      var vs = window.speechSynthesis.getVoices();
+      for (var i = 0; i < vs.length; i++) { if ((vs[i].lang || '').toLowerCase().indexOf('ur') === 0) { return vs[i]; } }
+    } catch (e) {}
+    return null;
+  }
+  function refreshListen() { var v = window.speechSynthesis && urduVoice(); listens.forEach(function (b) { b.hidden = !v; }); }
+  if (window.speechSynthesis && window.SpeechSynthesisUtterance) {
+    refreshListen();
+    try { window.speechSynthesis.addEventListener('voiceschanged', refreshListen); } catch (e) {}
+    listens.forEach(function (b) {
+      b.addEventListener('click', function () {
+        try {
+          window.speechSynthesis.cancel();
+          var u = new SpeechSynthesisUtterance(b.getAttribute('data-say'));
+          var v = urduVoice(); if (v) { u.voice = v; u.lang = v.lang; } else { u.lang = 'ur-PK'; }
+          u.rate = 0.9; window.speechSynthesis.speak(u);
+        } catch (e) {}
+      });
+    });
+  }
+})();
+</script>
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs .tab[data-t]'));
+  var up = document.getElementById('toTop');
+  var map = { services: 'services', destinations: 'services', process: 'services', documents: 'apply', apply: 'apply' };
+  var order = ['services', 'destinations', 'process', 'documents', 'apply', 'employers', 'verify', 'contact'];
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var line = window.innerHeight * 0.4, cur = 'top';
+    order.forEach(function (id) { var el = document.getElementById(id); if (el && el.getBoundingClientRect().top <= line) { cur = id; } });
+    var tab = cur === 'top' ? 'top' : (map[cur] || '');
+    tabs.forEach(function (a) { a.classList.toggle('act', a.getAttribute('data-t') === tab); });
+    if (up) { up.classList.toggle('on', y > 600); }
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+  if (up) {
+    up.addEventListener('click', function () {
+      var r = false; try { r = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+      window.scrollTo({ top: 0, behavior: r ? 'auto' : 'smooth' });
+    });
+  }
+})();
+</script>
+<script>
+/* Office register. Shown only to people who can edit this page; the data lives in the page database and is hidden from everyone else by the database rules. */
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  if (!window.claude || !window.claude.use) { return; }
+  var db = null, assets = null, dl = null;
+  var rows = [], flt = 'all', query = '', busy = {}, deferred = false, msgT = null;
+  var STATUS = [['new', 'New'], ['contacted', 'Contacted'], ['documents', 'Documents received'], ['medical', 'Medical'], ['visa', 'Visa processing'], ['departed', 'Departed'], ['closed', 'Not proceeding']];
+  var DOCS = [['passport', 'Passport'], ['cnic', 'CNIC'], ['photos', 'Photos'], ['cv', 'CV'], ['certificate', 'Certificate'], ['experience', 'Experience letter'], ['other', 'Other']];
+  var TYPES = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'image/gif', pdf: 'application/pdf' };
+  var OKTYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'];
+  var ID_RE = /^[0-9a-f]{32}$/;
+  var NEXT = { new: 'Call or message them, then ask for passport and CNIC.', contacted: 'Collect the documents.', documents: 'Check every document, then arrange the medical.', medical: 'Wait for the medical result, then start the visa.', visa: 'Track the visa and share the travel details.', departed: 'Finished. Keep the record only as long as needed.', closed: 'Not proceeding. Delete the record when the retention period ends.' };
+  var CORE = ['passport', 'cnic', 'photos'];
+  var RETAIN_DAYS = 90, BACKUP_DAYS = 7;
+  var lastBackup = 0, dupOk = '';
+  function today() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function isOpen(r) { return r.status !== 'departed' && r.status !== 'closed'; }
+  function isDue(r) { return !!r.followUp && r.followUp <= today() && isOpen(r); }
+  function withLog(cur, text) { var l = (cur && Array.isArray(cur.log)) ? cur.log.slice() : []; l.push({ at: Date.now(), t: text }); return l.slice(-30); }
+  function fmtTime(ms) { try { return new Date(ms).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; } }
+
+  function h(tag, props, kids) {
+    var e = document.createElement(tag);
+    if (props) {
+      Object.keys(props).forEach(function (k) {
+        var v = props[k];
+        if (k === 'class') { e.className = v; }
+        else if (k === 'text') { e.textContent = v; }
+        else if (k.slice(0, 2) === 'on') { e.addEventListener(k.slice(2), v); }
+        else { e.setAttribute(k, v); }
+      });
+    }
+    (kids || []).forEach(function (c) { if (c == null || c === false) { return; } e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function icon(name) { var s = document.createElement('span'); s.className = 'ic'; s.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-' + name + '"/></svg>'; return s; }
+  function msg(t, bad) {
+    var m = $('offMsg'); m.textContent = t || ''; m.className = 'off-msg' + (bad ? ' bad' : '');
+    clearTimeout(msgT); if (t) { msgT = setTimeout(function () { m.textContent = ''; }, 6000); }
+  }
+  function errText(e) {
+    var c = e && e.code;
+    if (c === 'invalid_argument') { return 'Not allowed for your account.'; }
+    if (c === 'quota_exceeded' || c === 'quota_or_state') { return 'Storage is full. Delete old files or applicants first.'; }
+    if (c === 'too_large') { return 'The file is too large (limit 20 MB).'; }
+    if (c === 'unsupported_type') { return 'Use a JPG, PNG, WEBP or PDF file.'; }
+    if (c === 'rate_limited' || c === 'resource_exhausted') { return 'Too fast. Wait a moment and try again.'; }
+    return 'Something went wrong. Please try again.';
+  }
+  function digits(s) { return String(s || '').replace(/\D/g, ''); }
+  function waNum(p) { var d = digits(p); if (d.indexOf('00') === 0) { d = d.slice(2); } if (d.charAt(0) === '0') { d = '92' + d.slice(1); } return d; }
+  function fmtDate(ms) { try { return new Date(ms).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return ''; } }
+  function ref(id) { return db.doc('applications/' + id); }
+  function latest(id) { for (var i = 0; i < rows.length; i++) { if (rows[i].id === id) { return rows[i]; } } return null; }
+  function label(list, key) { for (var i = 0; i < list.length; i++) { if (list[i][0] === key) { return list[i][1]; } } return key; }
+
+  function matches(r) {
+    if (flt === 'due') { if (!isDue(r)) { return false; } }
+    else if (flt !== 'all' && r.status !== flt) { return false; }
+    if (!query) { return true; }
+    var s = [r.name, r.phone, r.city, r.address, r.passport, r.trade, r.country, r.note, r.source].join(' ').toLowerCase();
+    return s.indexOf(query) >= 0;
+  }
+
+  function render() {
+    var counts = {}; rows.forEach(function (r) { counts[r.status] = (counts[r.status] || 0) + 1; });
+    var st = $('offStats'); st.textContent = '';
+    function chip(key, text, n) {
+      st.appendChild(h('button', { type: 'button', class: 'stat', 'aria-pressed': flt === key ? 'true' : 'false', onclick: function () { flt = key; render(); } }, [text, h('b', { text: String(n) })]));
+    }
+    chip('all', 'All', rows.length);
+    chip('due', 'Follow-up due', rows.filter(isDue).length);
+    STATUS.forEach(function (s) { chip(s[0], s[1], counts[s[0]] || 0); });
+
+    var list = $('offList'); list.textContent = '';
+    var shown = rows.filter(matches);
+    shown.forEach(function (r) { list.appendChild(card(r)); });
+    $('offEmpty').hidden = rows.length > 0;
+    if (rows.length > 0 && shown.length === 0) { list.appendChild(h('p', { class: 'off-msg', text: 'No applicants match this search.' })); }
+  }
+  function softRender() {
+    var a = document.activeElement;
+    if (a && $('offList').contains(a) && (a.tagName === 'TEXTAREA' || a.tagName === 'INPUT' || a.tagName === 'SELECT')) { deferred = true; return; }
+    render();
+  }
+
+  function card(r) {
+    var files = Array.isArray(r.files) ? r.files : [];
+    var docs = (r.docs && typeof r.docs === 'object') ? r.docs : {};
+    var wa = waNum(r.phone);
+
+    var sel = h('select', { class: 'off-sel', 'data-status': r.status || 'new', 'aria-label': 'Status' }, STATUS.map(function (s) { return h('option', { value: s[0], text: s[1] }); }));
+    sel.value = r.status || 'new';
+    sel.addEventListener('change', function () { patch(r.id, { status: sel.value }, 'Status: ' + label(STATUS, r.status || 'new') + ' → ' + label(STATUS, sel.value)); });
+
+    var head = h('div', { class: 'oc-head' }, [
+      h('div', { class: 'oc-who' }, [h('strong', { text: r.name || '(no name)' }), h('span', { class: 'oc-meta', text: [r.city, r.trade, r.country, r.source].filter(Boolean).join(' · ') })]),
+      sel
+    ]);
+    var contact = h('div', { class: 'oc-contact' }, [
+      r.phone ? h('a', { class: 'oc-link', href: 'tel:' + String(r.phone).replace(/[^\d+]/g, ''), text: r.phone }) : null,
+      wa ? h('a', { class: 'oc-link wa', href: 'https://wa.me/' + wa, target: '_blank', rel: 'noopener', text: 'WhatsApp' }) : null,
+      h('span', { class: 'oc-date', text: 'Added ' + fmtDate(r.createdAt) })
+    ]);
+
+    var chk = h('div', { class: 'oc-docs', role: 'group', 'aria-label': 'Documents received' }, DOCS.map(function (d) {
+      var on = !!docs[d[0]];
+      return h('button', { type: 'button', class: 'chipbtn', 'aria-pressed': on ? 'true' : 'false', onclick: function () { var o = {}; o[d[0]] = !on; patch(r.id, { docs: o }, d[1] + (on ? ' unticked' : ' received')); } }, [(on ? '✓ ' : '') + d[1]]);
+    }));
+
+    var fl = h('div', { class: 'oc-files' }, files.filter(function (f) { return f && ID_RE.test(f.id || ''); }).map(function (f) {
+      var isImg = /^image\//.test(f.type || '');
+      var a = h('a', { class: 'fchip', href: '/_blob/' + f.id, target: '_blank', rel: 'noopener', title: f.name || 'file' }, [
+        isImg ? h('img', { src: '/_blob/' + f.id, alt: '', loading: 'lazy' }) : icon('doc'),
+        h('span', { text: label(DOCS, f.kind) + ': ' + (f.name || 'file') })
+      ]);
+      var del = h('button', { type: 'button', class: 'fdel', 'aria-label': 'Remove file' }, ['Remove']);
+      var armed = false, tm = null;
+      del.addEventListener('click', function () {
+        if (!armed) { armed = true; del.classList.add('arm'); del.textContent = 'Tap again'; tm = setTimeout(function () { armed = false; del.classList.remove('arm'); del.textContent = 'Remove'; }, 4000); return; }
+        clearTimeout(tm); removeFile(r.id, f);
+      });
+      return h('span', { class: 'fwrap' }, [a, del]);
+    }));
+
+    var tools = h('div', { class: 'oc-tools' }, []);
+    if (assets) {
+      var ksel = h('select', { class: 'off-sel', 'aria-label': 'Document type' }, DOCS.map(function (d) { return h('option', { value: d[0], text: d[1] }); }));
+      var fi = h('input', { type: 'file', accept: 'image/*,.pdf,application/pdf', hidden: '' });
+      fi.addEventListener('change', function () { var f = fi.files && fi.files[0]; fi.value = ''; if (f) { attach(r.id, ksel.value, f); } });
+      var ab = h('button', { type: 'button', class: 'btn btn-sun' }, [icon('clip'), 'Attach file']);
+      ab.addEventListener('click', function () { fi.click(); });
+      tools.appendChild(ksel); tools.appendChild(ab); tools.appendChild(fi);
+    }
+    var odel = h('button', { type: 'button', class: 'odel' }, ['Delete applicant']);
+    var oarm = false, otm = null;
+    odel.addEventListener('click', function () {
+      if (!oarm) { oarm = true; odel.classList.add('arm'); odel.textContent = 'Tap again to delete' + (files.length ? ' with ' + files.length + ' file' + (files.length > 1 ? 's' : '') : ''); otm = setTimeout(function () { oarm = false; odel.classList.remove('arm'); odel.textContent = 'Delete applicant'; }, 4000); return; }
+      clearTimeout(otm); removeApplicant(r.id);
+    });
+    tools.appendChild(odel);
+
+    var note = h('textarea', { rows: '2', maxlength: '500', placeholder: 'Note', 'aria-label': 'Note' });
+    note.value = r.note || '';
+    note.addEventListener('change', function () { if (note.value !== (r.note || '')) { patch(r.id, { note: note.value.slice(0, 500) }); } });
+
+    var missing = DOCS.filter(function (d) { return CORE.indexOf(d[0]) >= 0 && !docs[d[0]]; }).map(function (d) { return d[1]; });
+    var ageDays = Math.floor((Date.now() - (r.updatedAt || r.createdAt || Date.now())) / 86400000);
+    var idRow = (r.address || r.passport) ? h('p', { class: 'oc-meta', text: [r.address, r.passport ? 'Passport ' + r.passport : ''].filter(Boolean).join(' · ') }) : null;
+    var nextRow = h('div', { class: 'oc-next' }, [
+      h('span', {}, [h('b', { text: 'Next: ' }), NEXT[r.status || 'new'] || '']),
+      (isOpen(r) && missing.length) ? h('span', { class: 'oc-miss', text: 'Missing: ' + missing.join(', ') }) : null
+    ]);
+    var fu = h('input', { type: 'date', 'aria-label': 'Follow-up date' });
+    fu.value = r.followUp || '';
+    fu.addEventListener('change', function () { if (fu.value !== (r.followUp || '')) { patch(r.id, { followUp: fu.value }, fu.value ? 'Follow-up set for ' + fu.value : 'Follow-up cleared'); } });
+    var followRow = h('div', {}, [h('label', { class: 'oc-follow' + (isDue(r) ? ' due' : '') }, ['Follow-up ', fu]), isDue(r) ? h('span', { class: 'oc-warn', text: '  Due now' }) : null]);
+    var retain = (r.status === 'closed' && ageDays >= RETAIN_DAYS) ? h('p', { class: 'oc-warn', text: 'Not proceeding for ' + ageDays + ' days. Consider deleting this record and its files.' }) : null;
+    var log = Array.isArray(r.log) ? r.log.slice(-5).reverse() : [];
+    var hist = log.length ? h('details', { class: 'oc-hist' }, [h('summary', { text: 'History (' + log.length + ')' }), h('ul', {}, log.map(function (e) { return h('li', { text: fmtTime(e.at) + ' · ' + e.t }); }))]) : null;
+    return h('article', { class: 'oc' + (busy[r.id] ? ' busy' : '') }, [head, contact, idRow, nextRow, followRow, retain, chk, files.length ? fl : null, tools, note, hist]);
+  }
+
+  async function patch(id, data, logText) {
+    if (busy[id]) { return; }
+    busy[id] = true;
+    try { data.updatedAt = Date.now(); if (logText) { data.log = withLog(latest(id), logText); } await ref(id).update(data); }
+    catch (e) { msg(errText(e), true); }
+    finally { delete busy[id]; softRender(); }
+  }
+  async function attach(id, kind, file) {
+    if (!assets) { msg('File storage is not available here.', true); return; }
+    if (busy[id]) { return; }
+    var ext = (file.name.split('.').pop() || '').toLowerCase();
+    var type = TYPES[ext] || (OKTYPES.indexOf(file.type) >= 0 ? file.type : '');
+    if (!type) { msg('Use a JPG, PNG, WEBP or PDF file.', true); return; }
+    if (file.size > 20 * 1024 * 1024) { msg('The file is too large (limit 20 MB).', true); return; }
+    busy[id] = true; render(); msg('Uploading ' + file.name + '...');
+    try {
+      var res = await assets.upload(file, { type: type });
+      var cur = latest(id);
+      var files = (cur && Array.isArray(cur.files)) ? cur.files.slice() : [];
+      files.push({ id: res.id, name: String(file.name).slice(0, 80), kind: kind, type: res.contentType, size: res.sizeBytes, at: Date.now() });
+      var dd = {}; dd[kind] = true;
+      await ref(id).update({ files: files, docs: dd, log: withLog(cur, 'File added: ' + label(DOCS, kind)), updatedAt: Date.now() });
+      msg('File attached.');
+    } catch (e) { msg(errText(e), true); }
+    finally { delete busy[id]; softRender(); }
+  }
+  async function removeFile(id, f) {
+    if (busy[id]) { return; }
+    busy[id] = true; render();
+    try {
+      if (assets) { await assets.delete(f.id); }
+      var cur = latest(id);
+      var files = (cur && Array.isArray(cur.files)) ? cur.files.filter(function (x) { return x.id !== f.id; }) : [];
+      await ref(id).update({ files: files, log: withLog(cur, 'File removed: ' + (f.name || 'file')), updatedAt: Date.now() });
+      msg('File removed.');
+    } catch (e) { msg(errText(e), true); }
+    finally { delete busy[id]; softRender(); }
+  }
+  async function removeApplicant(id) {
+    if (busy[id]) { return; }
+    var cur = latest(id); busy[id] = true; render();
+    try {
+      var files = (cur && Array.isArray(cur.files)) ? cur.files : [];
+      for (var i = 0; i < files.length; i++) { if (assets && ID_RE.test(files[i].id || '')) { try { await assets.delete(files[i].id); } catch (e) {} } }
+      await ref(id).delete();
+      msg('Applicant deleted.');
+    } catch (e) { msg(errText(e), true); }
+    finally { delete busy[id]; softRender(); }
+  }
+
+  function csvCell(v) {
+    var s = String(v == null ? '' : v);
+    if (/^(=|@|[+\-](?!\d))/.test(s)) { s = "'" + s; }
+    return '"' + s.replace(/"/g, '""') + '"';
+  }
+  function csv() {
+    var head = ['Name', 'Phone', 'City', 'Address', 'Passport', 'Trade', 'Country', 'Source', 'Status', 'Documents received', 'Files attached', 'Follow-up', 'Note', 'Added'];
+    var lines = rows.map(function (r) {
+      var docs = (r.docs && typeof r.docs === 'object') ? r.docs : {};
+      var got = DOCS.filter(function (d) { return docs[d[0]]; }).map(function (d) { return d[1]; }).join('; ');
+      return [r.name, r.phone, r.city, r.address, r.passport, r.trade, r.country, r.source, label(STATUS, r.status), got, Array.isArray(r.files) ? r.files.length : 0, r.followUp || '', r.note, fmtDate(r.createdAt)].map(csvCell).join(',');
+    });
+    return '﻿' + [head.map(csvCell).join(',')].concat(lines).join('\r\n');
+  }
+
+  function backupInfo() {
+    var el = $('offBackupInfo');
+    if (!lastBackup) { el.textContent = 'Last backup: never. Please back up now.'; el.className = 'stale'; return; }
+    var d = Math.floor((Date.now() - lastBackup) / 86400000);
+    el.textContent = 'Last backup: ' + (d === 0 ? 'today' : d + ' day' + (d > 1 ? 's' : '') + ' ago') + (d >= BACKUP_DAYS ? '. Please back up again.' : '.');
+    el.className = d >= BACKUP_DAYS ? 'stale' : '';
+  }
+  function wire() {
+    $('offSearch').addEventListener('input', function () { query = this.value.trim().toLowerCase(); render(); });
+    $('offAdd').addEventListener('click', function () { var f = $('offForm'); f.hidden = !f.hidden; if (!f.hidden) { $('offName').focus(); } });
+    $('offCancel').addEventListener('click', function () { $('offForm').hidden = true; });
+    $('offParse').addEventListener('click', function () {
+      var t = $('offPaste').value, got = 0;
+      function grab(re) { var x = t.match(re); return x ? x[1].trim() : ''; }
+      var gName = grab(/Name[^:\n]*:\s*(.+)/i), gCity = grab(/City[^:\n]*:\s*(.+)/i), gAddr = grab(/Address[^:\n]*:\s*(.+)/i), gWa = grab(/WhatsApp[^:\n]*:\s*(.+)/i), gPass = grab(/Passport No[^:\n]*:\s*(.+)/i);
+      if (gName) { $('offName').value = gName; got++; }
+      if (gCity) { $('offCity').value = gCity; got++; }
+      if (gAddr) { $('offAddress').value = gAddr; got++; }
+      if (gPass && !/not yet/i.test(gPass)) { $('offPassport').value = gPass; got++; }
+      var gCountry = grab(/Country[^:\n]*:\s*(.+)/i);
+      if (gCountry) { var cs = $('offCountry'); for (var k = 0; k < cs.options.length; k++) { if (cs.options[k].value.toLowerCase() === gCountry.toLowerCase()) { cs.value = cs.options[k].value; got++; break; } } }
+      var m = t.match(/looking for an? (.+?) job in (.+?)\.\s*My number:\s*([+\d][\d\s\-]{6,})/i);
+      var ph = gWa || (m && m[3]) || (t.match(/(?:\+?92|0)3\d{2}[\s-]?\d{7}/) || [''])[0];
+      if (ph) { $('offPhone').value = ph.trim(); got++; }
+      if (m) {
+        $('offTrade').value = m[1].trim(); got++;
+        var sel = $('offCountry'), c = m[2].trim().toLowerCase();
+        for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].value.toLowerCase() === c) { sel.value = sel.options[i].value; got++; break; } }
+      }
+      $('offSource').value = 'WhatsApp';
+      msg(got ? 'Form filled. Add the name and check the details.' : 'Could not read the message. Fill the form by hand.', !got);
+    });
+    $('offList').addEventListener('focusout', function () { if (deferred) { deferred = false; setTimeout(render, 80); } });
+    $('offForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var name = $('offName').value.trim(), phone = $('offPhone').value.trim();
+      if (!name && digits(phone).length < 7) { msg('Enter a name or a phone number.', true); return; }
+      var key = digits(phone).slice(-10);
+      if (key.length >= 7 && dupOk !== key) {
+        var dup = rows.filter(function (x) { return digits(x.phone).slice(-10) === key; })[0];
+        if (dup) { dupOk = key; msg('This number is already saved for ' + (dup.name || 'another applicant') + '. Tap Save again to add anyway.', true); return; }
+      }
+      dupOk = '';
+      var btn = $('offSave'); btn.disabled = true;
+      try {
+        var now = Date.now();
+        await db.collection('applications').doc().set({
+          name: name, phone: phone, city: $('offCity').value.trim(), address: $('offAddress').value.trim(), passport: $('offPassport').value.trim().toUpperCase(), trade: $('offTrade').value.trim(), country: $('offCountry').value, source: $('offSource').value,
+          note: $('offNote').value.trim(), followUp: $('offFollow').value || '', status: 'new', docs: {}, files: [], log: [{ at: now, t: 'Record created' }], createdAt: now, updatedAt: now
+        });
+        $('offForm').reset(); $('offForm').hidden = true; msg('Applicant saved.');
+      } catch (err) { msg(errText(err), true); }
+      finally { btn.disabled = false; }
+    });
+    $('offBackup').addEventListener('click', async function () {
+      if (!dl) { msg('Saving files is not available in this view.', true); return; }
+      if (!rows.length) { msg('Nothing to back up yet.', true); return; }
+      try {
+        var payload = { app: 'RSA & Gulf Consultant office register', savedAt: new Date().toISOString(), count: rows.length, applicants: rows };
+        await dl.save({ filename: 'rsa-backup-' + today() + '.json', data: JSON.stringify(payload, null, 2) });
+        lastBackup = Date.now(); backupInfo();
+        try { await db.doc('meta/state').set({ lastBackupAt: lastBackup }); } catch (e) {}
+        msg('Backup saved. Keep the file somewhere safe.');
+      } catch (err) { if (!err || err.code !== 'declined') { msg('Could not save the backup here.', true); } }
+    });
+    if (dl) {
+      $('offCsv').addEventListener('click', async function () {
+        if (!rows.length) { msg('Nothing to export yet.', true); return; }
+        var d = new Date(), stamp = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+        try { await dl.save({ filename: 'rsa-applicants-' + stamp + '.csv', data: csv() }); msg('Export ready.'); }
+        catch (err) { if (!err || err.code !== 'declined') { msg('Could not save the file here.', true); } }
+      });
+    }
+  }
+
+  async function boot() {
+    var can = false;
+    try { var u = await window.claude.use('user'); can = u ? await u.canEdit() : false; } catch (e) {}
+    if (!can) { return; }
+    try { db = await window.claude.use('db'); } catch (e) {}
+    if (!db) { return; }
+    try { assets = await window.claude.use('assets'); } catch (e) {}
+    try { dl = await window.claude.use('downloads'); } catch (e) {}
+    $('office').hidden = false; $('officeChip').hidden = false;
+    if (!assets) { $('offNoFiles').hidden = false; }
+    if (!dl) { $('offCsv').hidden = true; $('offBackup').hidden = true; }
+    try { var ms = await db.doc('meta/state').get(); var md = ms && (typeof ms.data === 'function' ? ms.data() : null); if (md && md.lastBackupAt) { lastBackup = md.lastBackupAt; } } catch (e) {}
+    backupInfo();
+    wire();
+    render();
+    try {
+      db.collection('applications').orderBy('createdAt', 'desc').limit(1000).onSnapshot(function (snap) {
+        rows = snap.docs.map(function (d) { var o = Object.assign({}, d.data()); o.id = d.id; return o; });
+        softRender();
+      }, function () { msg('Could not load the register. Reload the page.', true); });
+    } catch (e) { msg('Could not load the register.', true); }
+    if (location.hash === '#office') { setTimeout(function () { $('office').scrollIntoView(); }, 200); }
+  }
+  boot();
+})();
+</script>
+
+</body></html>
